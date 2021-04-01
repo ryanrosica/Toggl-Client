@@ -30,3 +30,15 @@ struct TogglTimerDay: Identifiable {
     
     
 }
+
+extension Array where Element == TogglTimer {
+    func groupToDays() -> [TogglTimerDay]{
+        return self.group(by: \.start?.startOfDay).map {
+            TogglTimerDay (
+                timerGroups: $0.group(by: \.templateIdentifier)
+                    .map { TogglTimerGroup(timers: $0) }
+                    .sorted { $0.stop ?? .distantFuture > $1.stop ?? .distantFuture }
+            )
+        }
+    }
+}

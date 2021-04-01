@@ -30,18 +30,3 @@ struct SegmentedBarView: View {
 }
 
 
-struct SegmentedBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        SegmentedBarView(
-            model: .init(
-                segments: [
-                    Segment(title: "1", color: .red, weight: 3),
-                    Segment(title: "2", color: .blue, weight: 4),
-                    Segment(title: "3", color: .green, weight: 2),
-                    Segment(title: "9", color: .orange, weight: 3)
-                ]
-            
-            )
-        )
-    }
-}

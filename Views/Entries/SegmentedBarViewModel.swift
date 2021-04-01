@@ -22,6 +22,20 @@ struct SegmentedBarViewModel {
         return (CGFloat(segments[segmentIndex].weight) / CGFloat(total)) * CGFloat(totalWidth)
     }
     
+    init (from entries: [TogglTimer]) {
+        let groups = entries.group(by: \.project).map { entryGroup in
+            TogglTimerGroup(timers: entryGroup)
+        }
+        let segments = groups.map {
+            Segment (
+                title: $0.project?.name ?? "No Project",
+                color: $0.project?.color() ?? .gray,
+                weight: $0.duration
+            )
+        }
+        self.segments = segments.sorted(by: { $0.title > $1.title })
+    }
+    
 }
 
 struct Segment: Identifiable {

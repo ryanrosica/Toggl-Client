@@ -202,6 +202,8 @@
 		5FCE1D77261660AD000A0130 /* TogglError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D75261660AD000A0130 /* TogglError.swift */; };
 		5FCE1D85261660C5000A0130 /* TogglResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D84261660C5000A0130 /* TogglResponse.swift */; };
 		5FCE1D86261660C5000A0130 /* TogglResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D84261660C5000A0130 /* TogglResponse.swift */; };
+		5FCE1D94261662B7000A0130 /* Date+string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D93261662B7000A0130 /* Date+string.swift */; };
+		5FCE1D95261662B7000A0130 /* Date+string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D93261662B7000A0130 /* Date+string.swift */; };
 		5FD1908B24CF1E21003F4A2A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1908A24CF1E21003F4A2A /* ActionButton.swift */; };
 		5FD808632481D1BB00489557 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD808622481D1BB00489557 /* ColorPickerView.swift */; };
 		5FDA8E5A24781580000A4572 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E5924781580000A4572 /* AddButton.swift */; };
@@ -389,6 +391,7 @@
 		5FCE1D6C26166080000A0130 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		5FCE1D75261660AD000A0130 /* TogglError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglError.swift; sourceTree = "<group>"; };
 		5FCE1D84261660C5000A0130 /* TogglResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglResponse.swift; sourceTree = "<group>"; };
+		5FCE1D93261662B7000A0130 /* Date+string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+string.swift"; sourceTree = "<group>"; };
 		5FD1908A24CF1E21003F4A2A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		5FD808622481D1BB00489557 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		5FDA8E5924781580000A4572 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
@@ -692,6 +695,7 @@
 				5F5832D524EF28AE002C2343 /* Array+grouping.swift */,
 				5FB8A61B248457210042473B /* String+Base64.swift */,
 				5FE965C5255CB6E200531E0F /* String+fontlengh.swift */,
+				5FCE1D93261662B7000A0130 /* Date+string.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1177,6 +1181,7 @@
 				5FA71CCF24732E8600BB8237 /* TimerInspectorViewSmall.swift in Sources */,
 				5F1D2F202475B2D3003B257A /* ProjectPicker.swift in Sources */,
 				5F8CD71F24F94CE700F35B56 /* TimerGroupView.swift in Sources */,
+				5FCE1D94261662B7000A0130 /* Date+string.swift in Sources */,
 				5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */,
 				5FCE1D76261660AD000A0130 /* TogglError.swift in Sources */,
 				5FA71CC924732D7B00BB8237 /* TimerView.swift in Sources */,
@@ -1297,6 +1302,7 @@
 				5F33D03825CCB9EA0059324C /* TogglRequest.swift in Sources */,
 				5F33D02425CCB9E20059324C /* SplashScreen.swift in Sources */,
 				5F33CFFF25CCB9D60059324C /* ProjectInspector.swift in Sources */,
+				5FCE1D95261662B7000A0130 /* Date+string.swift in Sources */,
 				5F33D04C25CCB9F20059324C /* TogglTimer.swift in Sources */,
 				5F33CFF425CCB9D10059324C /* SectionHeader.swift in Sources */,
 				5F33D04225CCB9EA0059324C /* Array+grouping.swift in Sources */,

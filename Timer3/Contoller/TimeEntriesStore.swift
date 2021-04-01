@@ -13,41 +13,22 @@ class TimeEntriesStore: ViewModel {
     let togglController = TogglController.shared
     @Published var days = [TogglTimerDay]()
     @Published var calEvents: [TimeBlock] = []
-    @Published var dateRange: DateRange {
-        didSet { self.refresh() }
-    }
-    private(set) var entries: [TogglTimer] = [TogglTimer]() {
-        didSet { group() }
-    }
+    @Published var dateRange: DateRange { didSet { self.refresh() } }
+    private(set) var entries: [TogglTimer] = [TogglTimer]() { didSet { group() } }
     @Published var loading = false
     
     var duration: String {
-        let totalSeconds = TogglTimerGroup(timers: entries).duration
-        let hours: Int = totalSeconds / 3600
-        let minutes: Int = ( totalSeconds - (3600 * hours) ) / 60
-        var result = ""
-        if (hours > 0) { result += "\(hours) hours " }
-        if (minutes > 0) { result += "\(minutes) minutes " }
-        return result
+        return TogglTimerGroup(timers: entries).duration.stringFromDuration
     }
     
-    var cancellable: AnyCancellable?
 
     var barModel: SegmentedBarViewModel {
-        let groups = entries.group(by: \.project).map { entryGroup in
-            TogglTimerGroup(timers: entryGroup)
-        }
-        let segments = groups.map {
-            Segment (
-                title: $0.project?.name ?? "No Project",
-                color: $0.project?.color() ?? .gray,
-                weight: $0.duration
-            )
-        }
-        return SegmentedBarViewModel(segments: segments.sorted(by: { $0.title > $1.title }))
+        return SegmentedBarViewModel(from: entries)
     }
     
     
+    //refresh on change of userstore
+    var cancellable: AnyCancellable?
     override init() {
         self.dateRange = .today
         super.init()
@@ -56,13 +37,7 @@ class TimeEntriesStore: ViewModel {
     }
     
     private func group() {
-        self.days = entries.group(by: \.start?.startOfDay).map {
-            TogglTimerDay (
-                timerGroups: $0.group(by: \.templateIdentifier)
-                    .map { TogglTimerGroup(timers: $0) }
-                    .sorted { $0.stop ?? .distantFuture > $1.stop ?? .distantFuture }
-            )
-        }
+        self.days = entries.groupToDays()
         objectWillChange.send()
     }
     
@@ -116,7 +91,6 @@ class TimeEntriesStore: ViewModel {
         self.state = .loaded
     }
     
-    
     func deleteTimer(in group: TogglTimerGroup, timerIndex: Int) {
         let timer = group.timers[timerIndex]
         delete(timer: timer)
@@ -127,10 +101,4 @@ class TimeEntriesStore: ViewModel {
             self.refresh()
         }
     }
-    
-    
-    
-    
-
-    
 }

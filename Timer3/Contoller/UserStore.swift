@@ -17,11 +17,7 @@ class UserStore: ViewModel {
         super.init()
         refresh()
     }
-    
-    func addTempTag(tag: String) {
-        user?.tags?.append(TogglTag(name: tag, id: UUID().hashValue))
-    }
-    
+
     var addCancellable: AnyCancellable?
     func add(project: TogglProject) {
         addCancellable?.cancel()
