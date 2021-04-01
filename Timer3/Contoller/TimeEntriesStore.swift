@@ -14,7 +14,7 @@ class TimeEntriesStore: ViewModel {
     @Published var days = [TogglTimerDay]()
     @Published var calEvents: [TimeBlock] = []
     @Published var dateRange: DateRange { didSet { self.refresh() } }
-    private(set) var entries: [TogglTimer] = [TogglTimer]() { didSet { group() } }
+    private(set) var entries = [TogglTimer]() { didSet { group() } }
     @Published var loading = false
     
     var duration: String {

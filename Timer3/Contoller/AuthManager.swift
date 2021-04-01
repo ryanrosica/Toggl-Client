@@ -27,7 +27,7 @@ class AuthManager {
     
     static func delete() {
         let keychain = KeychainSwift()
-        keychain.delete("toggl_api_token")
+        keychain.delete(keychainKey)
     }
     
     

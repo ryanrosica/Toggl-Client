@@ -10,8 +10,8 @@ import Foundation
 import Combine
 
 class UserStore: ViewModel {
-    @Published private(set) var user: TogglUser?
     static let shared = UserStore()
+    @Published private(set) var user: TogglUser?
     
     private override init() {
         super.init()
@@ -52,10 +52,9 @@ class UserStore: ViewModel {
     }
 
     func deleteProject(at index: Int) {
-        guard let numberOfProjects = user?.projects?.count else { return }
-        guard numberOfProjects > index else { return }
-        guard let project = user?.projects?[index] else { return }
-        delete(project: project)
+        guard let projects = user?.projects else { return }
+        guard projects.indices.contains(index) else { return }
+        delete(project: projects[index])
     }
     
     
@@ -77,9 +76,7 @@ class UserStore: ViewModel {
                 let projectsFilteredByNonArchived = user.projects?.filter{ ($0.deleted) }
                 user.projects = projectsFilteredByNonArchived
                 self.user = user
-                if let completion = completion {
-                    completion()
-                }
+                if let completion = completion { completion() }
             }
         )
     }
@@ -87,8 +84,6 @@ class UserStore: ViewModel {
     
     var updateProjectCancellable: AnyCancellable?
     func updateProject(from project1: TogglProject, to project2: TogglProject) {
-        print("THIS WAS CALLED")
-
         updateProjectCancellable?.cancel()
         let request = TogglRequest<TogglProjectData> (
             endpoint: .project(project1.id),
@@ -97,11 +92,7 @@ class UserStore: ViewModel {
         )
         updateProjectCancellable = request.publisher?.sink(
             receiveCompletion: recieveCompletion,
-            receiveValue: { newProject in
-                print("THIS WAS CALLED")
-                self.refresh()
-                
-            }
+            receiveValue: { _ in self.refresh() }
         )
     }
 }
