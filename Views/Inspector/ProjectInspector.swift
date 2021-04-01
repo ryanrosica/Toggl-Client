@@ -12,7 +12,7 @@ struct ProjectInspector: View {
     @Binding var project: TogglProject
     @State var newProject: TogglProject = TogglProject()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    @State var initialized = false
     
     var body: some View {
         VStack {
@@ -21,21 +21,15 @@ struct ProjectInspector: View {
                 .background(Color(.tertiarySystemFill))
                 .cornerRadius(15.0)
                 .padding()
-            ColorPickerView(colors:
-                [[Color.red, Color.green, Color.orange, Color.pink, Color.red, Color.green],
-                 [Color.yellow, Color.purple, Color.blue, Color.pink, Color.red, Color.green]], selected: .init(get: { newProject.colorID ?? 0 }, set: { newProject.colorID =  $0})
-            )
+            ColorPickerView(selected: .init(get: { newProject.colorID ?? 0 }, set: { newProject.colorID =  $0}))
 
             ActionButton (name: "Save") {
                 project = newProject
                 presentationMode.wrappedValue.dismiss()
             }
-            
-
             Spacer()
-            
         }
-        .navigationBarTitle("New Project")
+        .navigationBarTitle(newProject.name ?? "")
 
         .onAppear {
             self.newProject = self.project

@@ -87,15 +87,21 @@ class UserStore: ViewModel {
     
     var updateProjectCancellable: AnyCancellable?
     func updateProject(from project1: TogglProject, to project2: TogglProject) {
+        print("THIS WAS CALLED")
+
         updateProjectCancellable?.cancel()
         let request = TogglRequest<TogglProjectData> (
             endpoint: .project(project1.id),
             httpMethod: .PUT,
-            data: TogglProjectData(data: project2).encodedData
+            dataWrapper: TogglProjectData(data: project2)
         )
         updateProjectCancellable = request.publisher?.sink(
             receiveCompletion: recieveCompletion,
-            receiveValue: { _ in self.refresh() }
+            receiveValue: { newProject in
+                print("THIS WAS CALLED")
+                self.refresh()
+                
+            }
         )
     }
 }

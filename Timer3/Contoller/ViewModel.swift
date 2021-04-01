@@ -19,6 +19,7 @@ class ViewModel: ObservableObject {
                 self.state = .loaded
             case .failure(let error):
                 self.state = .error(error)
+                print(error)
         }
     }
     

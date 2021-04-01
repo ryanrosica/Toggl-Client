@@ -49,7 +49,7 @@ struct TogglRequest <T: Decodable> {
     var auth: String? = AuthManager.apiKey
     var data: Data?
     var dataWrapper: DataWrapper?
-    let baseURL = "https://www.toggl.com/api/v8/"
+    let baseURL = "https://api.track.toggl.com/api/v8/"
 
 
     var publisher: AnyPublisher<T?, TogglAPIError>? {

@@ -32,8 +32,7 @@ struct TogglProject: TogglObject, Identifiable, Equatable {
     }
     
     static func == (first: TogglProject, second: TogglProject) -> Bool {
-        return
-            first.id == second.id
+        return first.id == second.id && first.name == second.name && first.colorID == second.colorID
     }
 
 }

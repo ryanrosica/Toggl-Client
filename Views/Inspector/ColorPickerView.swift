@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ColorPickerView: View {
-    var colors: [[Color]]
+    var colors = UIConstants.Colors.toggl
     @Binding var selected: Int?
     var selectedRow: Int? {
         guard let selected = selected else { return nil }
