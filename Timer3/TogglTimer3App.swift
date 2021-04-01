@@ -11,7 +11,6 @@ import CoreData
 //import WidgetKit
 @main
 struct TogglTimer3App: App {
-//    @Environment(\.scenePhase) private var scenePhase
     let persistence = PersistenceManager()
 
     var body: some Scene {
@@ -21,27 +20,8 @@ struct TogglTimer3App: App {
                     let font = UIFont.preferredFont(for: .largeTitle, weight: .bold, design: .default)
                     UINavigationBar.appearance().largeTitleTextAttributes = [.font : font]
                     UINavigationBar.appearance().tintColor = .systemPink
-//                    UITableView.appearance().sectionIndexColor = .clear
                     UITableViewCell.appearance().backgroundColor = UIColor.clear
-
-//                    UINavigationBar.appearance().isTranslucent = true
-
-//                    UINavigationBar.appearance().backgroundColor = .systemBackground
-                    
-//                    UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-//                    UINavigationBar.appearance().shadowImage = UIImage()
-//                    UITabBar.appearance().shadowImage = UIImage()
-//                    UITabBar.appearance().backgroundImage = UIImage()
-//                    UITabBar.appearance().isTranslucent = true
-//                    UITabBar.appearance().backgroundColor =  (.systemBackground)
-//                    UINavigationBar.appearance().backgroundColor = .systemBackground
-
                 }
-//                .onChange(of: scenePhase) { newScenePhase in
-//                    if newScenePhase == .background {
-//                        WidgetCenter.shared.reloadTimelines(ofKind: "com.ryanrosica.TogglTimer.RunningWidget")
-//                    }
-//                }
         }
         
     }
