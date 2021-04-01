@@ -1,0 +1,1933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F03B8E824CCDF1B0024616B /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B8E724CCDF1B0024616B /* BottomSheetView.swift */; };
+		5F03B8EA24CD0A710024616B /* TimerInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B8E924CD0A710024616B /* TimerInspectorView.swift */; };
+		5F060F8C2481CCD600D7CA52 /* ProjectInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F060F8B2481CCD600D7CA52 /* ProjectInspector.swift */; };
+		5F069BD524798BA2008C60B9 /* RearrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F069BD424798BA2008C60B9 /* RearrangeButton.swift */; };
+		5F069BE02479CFAA008C60B9 /* CloudData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F069BDF2479CFAA008C60B9 /* CloudData.swift */; };
+		5F07BA5624B27F98008AB78D /* DragHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BA5524B27F98008AB78D /* DragHandle.swift */; };
+		5F07BA5824B294BC008AB78D /* RecentTimersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BA5724B294BC008AB78D /* RecentTimersStore.swift */; };
+		5F1225B024E0CD0100715FD6 /* CalendarPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225AF24E0CD0100715FD6 /* CalendarPageView.swift */; };
+		5F1225B224E0D43900715FD6 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B124E0D43900715FD6 /* CalendarModel.swift */; };
+		5F1225BB24E0E3CC00715FD6 /* PagesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B624E0E3CC00715FD6 /* PagesBuilder.swift */; };
+		5F1225BC24E0E3CC00715FD6 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B724E0E3CC00715FD6 /* PageControl.swift */; };
+		5F1225BD24E0E3CC00715FD6 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B824E0E3CC00715FD6 /* Pages.swift */; };
+		5F1225BE24E0E3CC00715FD6 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B924E0E3CC00715FD6 /* PageViewController.swift */; };
+		5F1225BF24E0E3CC00715FD6 /* ModelPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225BA24E0E3CC00715FD6 /* ModelPages.swift */; };
+		5F17AD8E252A23BE0093B7DD /* SegmentedBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AD8D252A23BE0093B7DD /* SegmentedBarView.swift */; };
+		5F17AD93252A24150093B7DD /* SegmentedBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AD92252A24150093B7DD /* SegmentedBarViewModel.swift */; };
+		5F1A3D892472FEF8007E564D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3D882472FEF8007E564D /* AppDelegate.swift */; };
+		5F1A3D8B2472FEF8007E564D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3D8A2472FEF8007E564D /* SceneDelegate.swift */; };
+		5F1A3D8F2472FEFF007E564D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A3D8E2472FEFF007E564D /* Assets.xcassets */; };
+		5F1A3D922472FEFF007E564D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A3D912472FEFF007E564D /* Preview Assets.xcassets */; };
+		5F1A3D952472FEFF007E564D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1A3D932472FEFF007E564D /* LaunchScreen.storyboard */; };
+		5F1A3DA02472FEFF007E564D /* Timer3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3D9F2472FEFF007E564D /* Timer3Tests.swift */; };
+		5F1A3DAB2472FEFF007E564D /* Timer3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DAA2472FEFF007E564D /* Timer3UITests.swift */; };
+		5F1A3DBE2472FF37007E564D /* TogglTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DB92472FF36007E564D /* TogglTag.swift */; };
+		5F1A3DBF2472FF37007E564D /* TogglTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBA2472FF36007E564D /* TogglTimer.swift */; };
+		5F1A3DC02472FF37007E564D /* TogglProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBB2472FF37007E564D /* TogglProject.swift */; };
+		5F1A3DC12472FF37007E564D /* TogglUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBC2472FF37007E564D /* TogglUser.swift */; };
+		5F1A3DC22472FF37007E564D /* TogglWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBD2472FF37007E564D /* TogglWorkspace.swift */; };
+		5F1A3DC42472FF64007E564D /* TogglObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC32472FF64007E564D /* TogglObject.swift */; };
+		5F1A3DC72473001E007E564D /* TogglRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC62473001E007E564D /* TogglRequest.swift */; };
+		5F1A3DC924730071007E564D /* TogglController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC824730071007E564D /* TogglController.swift */; };
+		5F1A558B24CDEA6000131578 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A558A24CDEA6000131578 /* NowPlayingView.swift */; };
+		5F1A91AD25C87FBC0002E131 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AB25C87FBC0002E131 /* ViewControllerResolver.swift */; };
+		5F1A91AE25C87FBC0002E131 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AC25C87FBC0002E131 /* SearchBar.swift */; };
+		5F1D2F1E2475B005003B257A /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D2F1D2475B005003B257A /* FormCell.swift */; };
+		5F1D2F202475B2D3003B257A /* ProjectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D2F1F2475B2D3003B257A /* ProjectPicker.swift */; };
+		5F1E093C248C47E4006CAB3E /* Date+starts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E093B248C47E4006CAB3E /* Date+starts.swift */; };
+		5F2914A824D9F4B800607A8F /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2914A724D9F4B800607A8F /* CalendarCellView.swift */; };
+		5F2914AA24D9F5C500607A8F /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2914A924D9F5C500607A8F /* WeekView.swift */; };
+		5F33CF6525CCB94C0059324C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F33CF6425CCB94C0059324C /* Assets.xcassets */; };
+		5F33CF6825CCB94C0059324C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F33CF6725CCB94C0059324C /* Preview Assets.xcassets */; };
+		5F33CF7425CCB94C0059324C /* TimerMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33CF7325CCB94C0059324C /* TimerMacTests.swift */; };
+		5F33CF7F25CCB94C0059324C /* TimerMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33CF7E25CCB94C0059324C /* TimerMacUITests.swift */; };
+		5F33CF9125CCB9590059324C /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9025CCB9590059324C /* KeychainSwift */; };
+		5F33CF9325CCB95D0059324C /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9225CCB95D0059324C /* Introspect */; };
+		5F33CF9525CCB9600059324C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9425CCB9600059324C /* PopupView */; };
+		5F33CFA825CCB9B00059324C /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A2248C0A0400DF5389 /* UIConstants.swift */; };
+		5F33CFB025CCB9B60059324C /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AB25C87FBC0002E131 /* ViewControllerResolver.swift */; };
+		5F33CFB125CCB9B60059324C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AC25C87FBC0002E131 /* SearchBar.swift */; };
+		5F33CFBA25CCB9BB0059324C /* ModelPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225BA24E0E3CC00715FD6 /* ModelPages.swift */; };
+		5F33CFBC25CCB9BB0059324C /* PagesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B624E0E3CC00715FD6 /* PagesBuilder.swift */; };
+		5F33CFC325CCB9BF0059324C /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225B124E0D43900715FD6 /* CalendarModel.swift */; };
+		5F33CFC425CCB9BF0059324C /* CalendarPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1225AF24E0CD0100715FD6 /* CalendarPageView.swift */; };
+		5F33CFC525CCB9BF0059324C /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */; };
+		5F33CFC625CCB9BF0059324C /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2914A924D9F5C500607A8F /* WeekView.swift */; };
+		5F33CFC725CCB9BF0059324C /* CalendarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2914A724D9F4B800607A8F /* CalendarCellView.swift */; };
+		5F33CFD725CCB9C60059324C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE21C249BEF15006A4744 /* SettingsView.swift */; };
+		5F33CFD825CCB9C60059324C /* ProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02A8E25B4EF31003CFF1C /* ProfileRow.swift */; };
+		5F33CFDF25CCB9C90059324C /* SegmentedBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AD8D252A23BE0093B7DD /* SegmentedBarView.swift */; };
+		5F33CFE025CCB9C90059324C /* SegmentedBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F17AD92252A24150093B7DD /* SegmentedBarViewModel.swift */; };
+		5F33CFE125CCB9C90059324C /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E9224785D17000A4572 /* EntriesView.swift */; };
+		5F33CFE225CCB9C90059324C /* TimerGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8CD71E24F94CE700F35B56 /* TimerGroupView.swift */; };
+		5F33CFE925CCB9CD0059324C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CC624732D7100BB8237 /* HomeView.swift */; };
+		5F33CFEA25CCB9CD0059324C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CC824732D7B00BB8237 /* TimerView.swift */; };
+		5F33CFEC25CCB9CD0059324C /* AddFirstTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A4248C15BD00DF5389 /* AddFirstTimerView.swift */; };
+		5F33CFF325CCB9D10059324C /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA960A224F8526F00816DE1 /* TimeRange.swift */; };
+		5F33CFF425CCB9D10059324C /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4844D2250EE87300DBE38F /* SectionHeader.swift */; };
+		5F33CFF525CCB9D10059324C /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF35247F2340001F9130 /* TimeView.swift */; };
+		5F33CFF625CCB9D10059324C /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CBC2473143100BB8237 /* TagsView.swift */; };
+		5F33CFF725CCB9D10059324C /* BottomListPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA960A024F84BBB00816DE1 /* BottomListPadding.swift */; };
+		5F33CFF825CCB9D10059324C /* TimerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02C892475CCE100E740D7 /* TimerDetailsView.swift */; };
+		5F33CFFF25CCB9D60059324C /* ProjectInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F060F8B2481CCD600D7CA52 /* ProjectInspector.swift */; };
+		5F33D00025CCB9D60059324C /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D2F1D2475B005003B257A /* FormCell.swift */; };
+		5F33D00125CCB9D60059324C /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD808622481D1BB00489557 /* ColorPickerView.swift */; };
+		5F33D00225CCB9D60059324C /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB29AC255C613900148518 /* ProjectsView.swift */; };
+		5F33D00325CCB9D60059324C /* TimerInspectorViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CCE24732E8600BB8237 /* TimerInspectorViewSmall.swift */; };
+		5F33D00425CCB9D60059324C /* TimerInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F03B8E924CD0A710024616B /* TimerInspectorView.swift */; };
+		5F33D00525CCB9D60059324C /* ProjectPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1D2F1F2475B2D3003B257A /* ProjectPicker.swift */; };
+		5F33D00625CCB9D60059324C /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE694A825648743008407AF /* ProjectsViewModel.swift */; };
+		5F33D00725CCB9D60059324C /* TagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34122475FDBB00296388 /* TagPicker.swift */; };
+		5F33D00E25CCB9DA0059324C /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B377B25116975002AAF01 /* BottomBar.swift */; };
+		5F33D00F25CCB9DA0059324C /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B3776251160DF002AAF01 /* TabView.swift */; };
+		5F33D01025CCB9DA0059324C /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B377D25116982002AAF01 /* SideBar.swift */; };
+		5F33D01125CCB9DA0059324C /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B37792511695E002AAF01 /* Tab.swift */; };
+		5F33D01825CCB9E20059324C /* DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F414B89251009C900F41D70 /* DisplayError.swift */; };
+		5F33D01925CCB9E20059324C /* DragHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BA5524B27F98008AB78D /* DragHandle.swift */; };
+		5F33D01A25CCB9E20059324C /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E5924781580000A4572 /* AddButton.swift */; };
+		5F33D01B25CCB9E20059324C /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1908A24CF1E21003F4A2A /* ActionButton.swift */; };
+		5F33D01C25CCB9E20059324C /* RearrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F069BD424798BA2008C60B9 /* RearrangeButton.swift */; };
+		5F33D01D25CCB9E20059324C /* DateRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69550D24BA11A6003A0ACA /* DateRangePicker.swift */; };
+		5F33D01E25CCB9E20059324C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF33247F13BB001F9130 /* LoginView.swift */; };
+		5F33D01F25CCB9E20059324C /* TimerContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3B7C35247B47360040723D /* TimerContextMenu.swift */; };
+		5F33D02125CCB9E20059324C /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA296ED24B3974200255A8A /* DoneButton.swift */; };
+		5F33D02225CCB9E20059324C /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CBE247314D000BB8237 /* StopButton.swift */; };
+		5F33D02325CCB9E20059324C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003CB247F32A40040BC26 /* ContentView.swift */; };
+		5F33D02425CCB9E20059324C /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003D1247F34FA0040BC26 /* SplashScreen.swift */; };
+		5F33D02B25CCB9E60059324C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA88C124F044E700D3F7A7 /* ViewModel.swift */; };
+		5F33D02C25CCB9E60059324C /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7BC24EB2C4D0015A4D5 /* ViewModelState.swift */; };
+		5F33D03325CCB9EA0059324C /* TogglController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC824730071007E564D /* TogglController.swift */; };
+		5F33D03425CCB9EA0059324C /* SavedTimersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CB424730FC500BB8237 /* SavedTimersStore.swift */; };
+		5F33D03525CCB9EA0059324C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7B824EAFD280015A4D5 /* AuthManager.swift */; };
+		5F33D03625CCB9EA0059324C /* TogglControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF31247F0B66001F9130 /* TogglControllerLogin.swift */; };
+		5F33D03725CCB9EA0059324C /* Date+starts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1E093B248C47E4006CAB3E /* Date+starts.swift */; };
+		5F33D03825CCB9EA0059324C /* TogglRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC62473001E007E564D /* TogglRequest.swift */; };
+		5F33D03925CCB9EA0059324C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7BA24EB04340015A4D5 /* APIClient.swift */; };
+		5F33D03B25CCB9EA0059324C /* RecentTimersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F07BA5724B294BC008AB78D /* RecentTimersStore.swift */; };
+		5F33D03C25CCB9EA0059324C /* CloudData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F069BDF2479CFAA008C60B9 /* CloudData.swift */; };
+		5F33D03D25CCB9EA0059324C /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003CD247F32E20040BC26 /* LoginStore.swift */; };
+		5F33D03E25CCB9EA0059324C /* TimeEntriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E8F24785A3B000A4572 /* TimeEntriesStore.swift */; };
+		5F33D03F25CCB9EA0059324C /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A61B248457210042473B /* String+Base64.swift */; };
+		5F33D04025CCB9EA0059324C /* RunningTimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CB62473103A00BB8237 /* RunningTimerStore.swift */; };
+		5F33D04125CCB9EA0059324C /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CD3247330D600BB8237 /* UserStore.swift */; };
+		5F33D04225CCB9EA0059324C /* Array+grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D524EF28AE002C2343 /* Array+grouping.swift */; };
+		5F33D04925CCB9F20059324C /* TogglTimerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */; };
+		5F33D04B25CCB9F20059324C /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CAE2473085800BB8237 /* DataWrapper.swift */; };
+		5F33D04C25CCB9F20059324C /* TogglTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBA2472FF36007E564D /* TogglTimer.swift */; };
+		5F33D04D25CCB9F20059324C /* TogglTimerDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */; };
+		5F33D04E25CCB9F20059324C /* TogglObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DC32472FF64007E564D /* TogglObject.swift */; };
+		5F33D04F25CCB9F20059324C /* TogglUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBC2472FF37007E564D /* TogglUser.swift */; };
+		5F33D05025CCB9F20059324C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3D882472FEF8007E564D /* AppDelegate.swift */; };
+		5F33D05125CCB9F20059324C /* TogglTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DB92472FF36007E564D /* TogglTag.swift */; };
+		5F33D05225CCB9F20059324C /* TogglWorkspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBD2472FF37007E564D /* TogglWorkspace.swift */; };
+		5F33D05325CCB9F20059324C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3D8A2472FEF8007E564D /* SceneDelegate.swift */; };
+		5F33D05425CCB9F20059324C /* TogglTimer3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F414B87251006DB00F41D70 /* TogglTimer3App.swift */; };
+		5F33D05525CCB9F20059324C /* TogglProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3DBB2472FF37007E564D /* TogglProject.swift */; };
+		5F3B7C34247B462A0040723D /* HexToColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3B7C33247B462A0040723D /* HexToColor.swift */; };
+		5F3B7C36247B47360040723D /* TimerContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3B7C35247B47360040723D /* TimerContextMenu.swift */; };
+		5F414B88251006DB00F41D70 /* TogglTimer3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F414B87251006DB00F41D70 /* TogglTimer3App.swift */; };
+		5F414B8A251009C900F41D70 /* DisplayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F414B89251009C900F41D70 /* DisplayError.swift */; };
+		5F4175AB24DB54AD000CFD2E /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */; };
+		5F4844D3250EE87400DBE38F /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4844D2250EE87300DBE38F /* SectionHeader.swift */; };
+		5F4B3777251160DF002AAF01 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B3776251160DF002AAF01 /* TabView.swift */; };
+		5F4B377A2511695E002AAF01 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B37792511695E002AAF01 /* Tab.swift */; };
+		5F4B377C25116975002AAF01 /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B377B25116975002AAF01 /* BottomBar.swift */; };
+		5F4B377E25116982002AAF01 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4B377D25116982002AAF01 /* SideBar.swift */; };
+		5F52C6A324E1D71800C9EA79 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F52C6A224E1D71800C9EA79 /* Intents.framework */; };
+		5F52C6A524E1D71E00C9EA79 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F52C6A424E1D71E00C9EA79 /* IntentsUI.framework */; };
+		5F5832D624EF28AE002C2343 /* Array+grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D524EF28AE002C2343 /* Array+grouping.swift */; };
+		5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */; };
+		5F5832DA24EF3A64002C2343 /* TogglTimerDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */; };
+		5F5F0ADC24F5661C00B5824F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5F0ADB24F5661C00B5824F /* SwiftUI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5F69550E24BA11A6003A0ACA /* DateRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69550D24BA11A6003A0ACA /* DateRangePicker.swift */; };
+		5F8959A3248C0A0400DF5389 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A2248C0A0400DF5389 /* UIConstants.swift */; };
+		5F8959A5248C15BD00DF5389 /* AddFirstTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A4248C15BD00DF5389 /* AddFirstTimerView.swift */; };
+		5F8BA70A24E1C39D00BDE7F1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F8BA70924E1C39D00BDE7F1 /* CloudKit.framework */; };
+		5F8CD71F24F94CE700F35B56 /* TimerGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8CD71E24F94CE700F35B56 /* TimerGroupView.swift */; };
+		5F9229E024980099005C91B0 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; platformFilter = ios; productRef = 5F9229DF24980099005C91B0 /* KeychainSwift */; };
+		5F94AA1F25F96BFE00F76C2D /* CalFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA1E25F96BFE00F76C2D /* CalFetcher.swift */; };
+		5F94AA2025F96BFE00F76C2D /* CalFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA1E25F96BFE00F76C2D /* CalFetcher.swift */; };
+		5F94AA2825F96C8D00F76C2D /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA2725F96C8D00F76C2D /* DateRange.swift */; };
+		5F94AA2925F96C8D00F76C2D /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA2725F96C8D00F76C2D /* DateRange.swift */; };
+		5F94AA3125F96D8800F76C2D /* TimeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA3025F96D8800F76C2D /* TimeBlock.swift */; };
+		5F94AA3225F96D8800F76C2D /* TimeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F94AA3025F96D8800F76C2D /* TimeBlock.swift */; };
+		5F98901324F9509400E80F86 /* RunningTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F98901224F9509400E80F86 /* RunningTimerView.swift */; };
+		5F9BA7B924EAFD290015A4D5 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7B824EAFD280015A4D5 /* AuthManager.swift */; };
+		5F9BA7BB24EB04340015A4D5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7BA24EB04340015A4D5 /* APIClient.swift */; };
+		5F9BA7BD24EB2C4D0015A4D5 /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA7BC24EB2C4D0015A4D5 /* ViewModelState.swift */; };
+		5FA02A8F25B4EF31003CFF1C /* ProfileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02A8E25B4EF31003CFF1C /* ProfileRow.swift */; };
+		5FA02A9525B4EFBC003CFF1C /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02A9425B4EFBC003CFF1C /* Haptics.swift */; };
+		5FA02C8A2475CCE100E740D7 /* TimerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02C892475CCE100E740D7 /* TimerDetailsView.swift */; };
+		5FA296EE24B3974200255A8A /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA296ED24B3974200255A8A /* DoneButton.swift */; };
+		5FA71CAF2473085800BB8237 /* DataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CAE2473085800BB8237 /* DataWrapper.swift */; };
+		5FA71CB524730FC500BB8237 /* SavedTimersStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CB424730FC500BB8237 /* SavedTimersStore.swift */; };
+		5FA71CB72473103A00BB8237 /* RunningTimerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CB62473103A00BB8237 /* RunningTimerStore.swift */; };
+		5FA71CBD2473143100BB8237 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CBC2473143100BB8237 /* TagsView.swift */; };
+		5FA71CBF247314D000BB8237 /* StopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CBE247314D000BB8237 /* StopButton.swift */; };
+		5FA71CC724732D7100BB8237 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CC624732D7100BB8237 /* HomeView.swift */; };
+		5FA71CC924732D7B00BB8237 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CC824732D7B00BB8237 /* TimerView.swift */; };
+		5FA71CCF24732E8600BB8237 /* TimerInspectorViewSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CCE24732E8600BB8237 /* TimerInspectorViewSmall.swift */; };
+		5FA71CD4247330D600BB8237 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA71CD3247330D600BB8237 /* UserStore.swift */; };
+		5FA960A124F84BBB00816DE1 /* BottomListPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA960A024F84BBB00816DE1 /* BottomListPadding.swift */; };
+		5FA960A324F8526F00816DE1 /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA960A224F8526F00816DE1 /* TimeRange.swift */; };
+		5FAAE215249B03CB006A4744 /* UIFont+preferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE214249B03CB006A4744 /* UIFont+preferredFont.swift */; };
+		5FAAE21D249BEF15006A4744 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE21C249BEF15006A4744 /* SettingsView.swift */; };
+		5FAF5FB02603FEE9002E0BA1 /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */; };
+		5FAF5FB12603FEE9002E0BA1 /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */; };
+		5FAF5FBF26042175002E0BA1 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FBE26042175002E0BA1 /* Week.swift */; };
+		5FAF5FC026042175002E0BA1 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FBE26042175002E0BA1 /* Week.swift */; };
+		5FAF5FC826042190002E0BA1 /* Weeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FC726042190002E0BA1 /* Weeks.swift */; };
+		5FAF5FC926042190002E0BA1 /* Weeks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FC726042190002E0BA1 /* Weeks.swift */; };
+		5FB7538825D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7538725D1ABD300DAD6BB /* CalendarEntriesView.swift */; };
+		5FB7538925D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7538725D1ABD300DAD6BB /* CalendarEntriesView.swift */; };
+		5FB7539125D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7539025D1AC2800DAD6BB /* CalendarEntriesViewModel.swift */; };
+		5FB7539225D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB7539025D1AC2800DAD6BB /* CalendarEntriesViewModel.swift */; };
+		5FB8A61C248457210042473B /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB8A61B248457210042473B /* String+Base64.swift */; };
+		5FC003CC247F32A40040BC26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003CB247F32A40040BC26 /* ContentView.swift */; };
+		5FC003CE247F32E20040BC26 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003CD247F32E20040BC26 /* LoginStore.swift */; };
+		5FC003D2247F34FA0040BC26 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003D1247F34FA0040BC26 /* SplashScreen.swift */; };
+		5FCB29AD255C613900148518 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB29AC255C613900148518 /* ProjectsView.swift */; };
+		5FD1908B24CF1E21003F4A2A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1908A24CF1E21003F4A2A /* ActionButton.swift */; };
+		5FD808632481D1BB00489557 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD808622481D1BB00489557 /* ColorPickerView.swift */; };
+		5FDA8E5A24781580000A4572 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E5924781580000A4572 /* AddButton.swift */; };
+		5FDA8E9024785A3B000A4572 /* TimeEntriesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E8F24785A3B000A4572 /* TimeEntriesStore.swift */; };
+		5FDA8E9324785D17000A4572 /* EntriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E9224785D17000A4572 /* EntriesView.swift */; };
+		5FDB34132475FDBB00296388 /* TagPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDB34122475FDBB00296388 /* TagPicker.swift */; };
+		5FDBDF32247F0B66001F9130 /* TogglControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF31247F0B66001F9130 /* TogglControllerLogin.swift */; };
+		5FDBDF34247F13BB001F9130 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF33247F13BB001F9130 /* LoginView.swift */; };
+		5FDBDF36247F2340001F9130 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF35247F2340001F9130 /* TimeView.swift */; };
+		5FE694A925648743008407AF /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE694A825648743008407AF /* ProjectsViewModel.swift */; };
+		5FE694B425649348008407AF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5FE694B325649348008407AF /* Introspect */; };
+		5FE965C6255CB6E200531E0F /* String+fontlengh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE965C5255CB6E200531E0F /* String+fontlengh.swift */; };
+		5FF237D6256497CB00AAD3D7 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5FF237D5256497CB00AAD3D7 /* PopupView */; };
+		5FFA88C224F044E800D3F7A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA88C124F044E700D3F7A7 /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F1A3D9C2472FEFF007E564D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1A3D7D2472FEF8007E564D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1A3D842472FEF8007E564D;
+			remoteInfo = Timer3;
+		};
+		5F1A3DA72472FEFF007E564D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1A3D7D2472FEF8007E564D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F1A3D842472FEF8007E564D;
+			remoteInfo = Timer3;
+		};
+		5F33CF7025CCB94C0059324C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1A3D7D2472FEF8007E564D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F33CF5D25CCB94B0059324C;
+			remoteInfo = TimerMac;
+		};
+		5F33CF7B25CCB94C0059324C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1A3D7D2472FEF8007E564D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F33CF5D25CCB94B0059324C;
+			remoteInfo = TimerMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FAAE1E5249806FC006A4744 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5F03B8E724CCDF1B0024616B /* BottomSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		5F03B8E924CD0A710024616B /* TimerInspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInspectorView.swift; sourceTree = "<group>"; };
+		5F060F8B2481CCD600D7CA52 /* ProjectInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectInspector.swift; sourceTree = "<group>"; };
+		5F069BD424798BA2008C60B9 /* RearrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearrangeButton.swift; sourceTree = "<group>"; };
+		5F069BDF2479CFAA008C60B9 /* CloudData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudData.swift; path = Timer3/Contoller/CloudData.swift; sourceTree = SOURCE_ROOT; };
+		5F07BA5524B27F98008AB78D /* DragHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragHandle.swift; sourceTree = "<group>"; };
+		5F07BA5724B294BC008AB78D /* RecentTimersStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTimersStore.swift; sourceTree = "<group>"; };
+		5F1225AF24E0CD0100715FD6 /* CalendarPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPageView.swift; sourceTree = "<group>"; };
+		5F1225B124E0D43900715FD6 /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		5F1225B624E0E3CC00715FD6 /* PagesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesBuilder.swift; sourceTree = "<group>"; };
+		5F1225B724E0E3CC00715FD6 /* PageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		5F1225B824E0E3CC00715FD6 /* Pages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
+		5F1225B924E0E3CC00715FD6 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		5F1225BA24E0E3CC00715FD6 /* ModelPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelPages.swift; sourceTree = "<group>"; };
+		5F17AD8D252A23BE0093B7DD /* SegmentedBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBarView.swift; sourceTree = "<group>"; };
+		5F17AD92252A24150093B7DD /* SegmentedBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedBarViewModel.swift; sourceTree = "<group>"; };
+		5F1A3D852472FEF8007E564D /* TogglTimer3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TogglTimer3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1A3D882472FEF8007E564D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5F1A3D8A2472FEF8007E564D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5F1A3D8E2472FEFF007E564D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F1A3D912472FEFF007E564D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F1A3D942472FEFF007E564D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F1A3D962472FEFF007E564D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1A3D9B2472FEFF007E564D /* TogglTimer3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglTimer3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1A3D9F2472FEFF007E564D /* Timer3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer3Tests.swift; sourceTree = "<group>"; };
+		5F1A3DA12472FEFF007E564D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1A3DA62472FEFF007E564D /* TogglTimer3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TogglTimer3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1A3DAA2472FEFF007E564D /* Timer3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer3UITests.swift; sourceTree = "<group>"; };
+		5F1A3DAC2472FEFF007E564D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1A3DB92472FF36007E564D /* TogglTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglTag.swift; sourceTree = "<group>"; };
+		5F1A3DBA2472FF36007E564D /* TogglTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglTimer.swift; sourceTree = "<group>"; };
+		5F1A3DBB2472FF37007E564D /* TogglProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglProject.swift; sourceTree = "<group>"; };
+		5F1A3DBC2472FF37007E564D /* TogglUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglUser.swift; sourceTree = "<group>"; };
+		5F1A3DBD2472FF37007E564D /* TogglWorkspace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglWorkspace.swift; sourceTree = "<group>"; };
+		5F1A3DC32472FF64007E564D /* TogglObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglObject.swift; sourceTree = "<group>"; };
+		5F1A3DC62473001E007E564D /* TogglRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TogglRequest.swift; sourceTree = "<group>"; };
+		5F1A3DC824730071007E564D /* TogglController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglController.swift; sourceTree = "<group>"; };
+		5F1A558A24CDEA6000131578 /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
+		5F1A91AB25C87FBC0002E131 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
+		5F1A91AC25C87FBC0002E131 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5F1D2F1D2475B005003B257A /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		5F1D2F1F2475B2D3003B257A /* ProjectPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPicker.swift; sourceTree = "<group>"; };
+		5F1E093B248C47E4006CAB3E /* Date+starts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+starts.swift"; sourceTree = "<group>"; };
+		5F2914A724D9F4B800607A8F /* CalendarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCellView.swift; sourceTree = "<group>"; };
+		5F2914A924D9F5C500607A8F /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		5F33CF5E25CCB94B0059324C /* TimerMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F33CF6425CCB94C0059324C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F33CF6725CCB94C0059324C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F33CF6925CCB94C0059324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F33CF6A25CCB94C0059324C /* TimerMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimerMac.entitlements; sourceTree = "<group>"; };
+		5F33CF6F25CCB94C0059324C /* TimerMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F33CF7325CCB94C0059324C /* TimerMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMacTests.swift; sourceTree = "<group>"; };
+		5F33CF7525CCB94C0059324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F33CF7A25CCB94C0059324C /* TimerMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F33CF7E25CCB94C0059324C /* TimerMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerMacUITests.swift; sourceTree = "<group>"; };
+		5F33CF8025CCB94C0059324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F3B7C33247B462A0040723D /* HexToColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexToColor.swift; sourceTree = "<group>"; };
+		5F3B7C35247B47360040723D /* TimerContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContextMenu.swift; sourceTree = "<group>"; };
+		5F414B87251006DB00F41D70 /* TogglTimer3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimer3App.swift; sourceTree = "<group>"; };
+		5F414B89251009C900F41D70 /* DisplayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayError.swift; sourceTree = "<group>"; };
+		5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
+		5F4844D2250EE87300DBE38F /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		5F4B3776251160DF002AAF01 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		5F4B37792511695E002AAF01 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		5F4B377B25116975002AAF01 /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		5F4B377D25116982002AAF01 /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		5F52C6A224E1D71800C9EA79 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.16.sdk/System/Library/Frameworks/Intents.framework; sourceTree = DEVELOPER_DIR; };
+		5F52C6A424E1D71E00C9EA79 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.16.sdk/System/iOSSupport/System/Library/Frameworks/IntentsUI.framework; sourceTree = DEVELOPER_DIR; };
+		5F52C6D124E1DACA00C9EA79 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		5F52C6D324E1DACA00C9EA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F52C6DB24E1DACA00C9EA79 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		5F52C6DE24E1DACA00C9EA79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5F52C6E024E1DACA00C9EA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F52C6E424E1DACA00C9EA79 /* TogglIntentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TogglIntentsUI.entitlements; sourceTree = "<group>"; };
+		5F52C6E824E1DACA00C9EA79 /* TogglIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TogglIntents.entitlements; sourceTree = "<group>"; };
+		5F52C6EF24E1DB0600C9EA79 /* StartTimerIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = StartTimerIntents.intentdefinition; sourceTree = "<group>"; };
+		5F5832D524EF28AE002C2343 /* Array+grouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+grouping.swift"; sourceTree = "<group>"; };
+		5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimerGroup.swift; sourceTree = "<group>"; };
+		5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimerDay.swift; sourceTree = "<group>"; };
+		5F5F0ADB24F5661C00B5824F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.16.sdk/System/iOSSupport/System/Library/Frameworks/SwiftUI.framework; sourceTree = DEVELOPER_DIR; };
+		5F69550D24BA11A6003A0ACA /* DateRangePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangePicker.swift; sourceTree = "<group>"; };
+		5F70DC3624D9E2BC0018CCBA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5F70DC3824D9E2BC0018CCBA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5F8959A2248C0A0400DF5389 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		5F8959A4248C15BD00DF5389 /* AddFirstTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFirstTimerView.swift; sourceTree = "<group>"; };
+		5F8BA70824E1BBBA00BDE7F1 /* TogglTimer3Release.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TogglTimer3Release.entitlements; sourceTree = "<group>"; };
+		5F8BA70924E1C39D00BDE7F1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		5F8CD71E24F94CE700F35B56 /* TimerGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGroupView.swift; sourceTree = "<group>"; };
+		5F9229582497C14A005C91B0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5F94AA1E25F96BFE00F76C2D /* CalFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalFetcher.swift; sourceTree = "<group>"; };
+		5F94AA2725F96C8D00F76C2D /* DateRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
+		5F94AA3025F96D8800F76C2D /* TimeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeBlock.swift; sourceTree = "<group>"; };
+		5F98901224F9509400E80F86 /* RunningTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTimerView.swift; sourceTree = "<group>"; };
+		5F9BA7B824EAFD280015A4D5 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		5F9BA7BA24EB04340015A4D5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5F9BA7BC24EB2C4D0015A4D5 /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		5FA02A8E25B4EF31003CFF1C /* ProfileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRow.swift; sourceTree = "<group>"; };
+		5FA02A9425B4EFBC003CFF1C /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		5FA02C892475CCE100E740D7 /* TimerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDetailsView.swift; sourceTree = "<group>"; };
+		5FA296ED24B3974200255A8A /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		5FA71CAE2473085800BB8237 /* DataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWrapper.swift; sourceTree = "<group>"; };
+		5FA71CB424730FC500BB8237 /* SavedTimersStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTimersStore.swift; sourceTree = "<group>"; };
+		5FA71CB62473103A00BB8237 /* RunningTimerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningTimerStore.swift; sourceTree = "<group>"; };
+		5FA71CBC2473143100BB8237 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
+		5FA71CBE247314D000BB8237 /* StopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopButton.swift; sourceTree = "<group>"; };
+		5FA71CC624732D7100BB8237 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5FA71CC824732D7B00BB8237 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5FA71CCE24732E8600BB8237 /* TimerInspectorViewSmall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerInspectorViewSmall.swift; sourceTree = "<group>"; };
+		5FA71CD3247330D600BB8237 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		5FA960A024F84BBB00816DE1 /* BottomListPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomListPadding.swift; sourceTree = "<group>"; };
+		5FA960A224F8526F00816DE1 /* TimeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
+		5FAAE214249B03CB006A4744 /* UIFont+preferredFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+preferredFont.swift"; sourceTree = "<group>"; };
+		5FAAE21C249BEF15006A4744 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+if.swift"; sourceTree = "<group>"; };
+		5FAF5FBE26042175002E0BA1 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		5FAF5FC726042190002E0BA1 /* Weeks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weeks.swift; sourceTree = "<group>"; };
+		5FB7538725D1ABD300DAD6BB /* CalendarEntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEntriesView.swift; sourceTree = "<group>"; };
+		5FB7539025D1AC2800DAD6BB /* CalendarEntriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEntriesViewModel.swift; sourceTree = "<group>"; };
+		5FB8A61B248457210042473B /* String+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		5FC003CB247F32A40040BC26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5FC003CD247F32E20040BC26 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
+		5FC003D1247F34FA0040BC26 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		5FCB29AC255C613900148518 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		5FD1908A24CF1E21003F4A2A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		5FD808622481D1BB00489557 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		5FDA8E5924781580000A4572 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		5FDA8E8E24782596000A4572 /* Timer3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timer3.entitlements; sourceTree = "<group>"; };
+		5FDA8E8F24785A3B000A4572 /* TimeEntriesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntriesStore.swift; sourceTree = "<group>"; };
+		5FDA8E9224785D17000A4572 /* EntriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesView.swift; sourceTree = "<group>"; };
+		5FDB34122475FDBB00296388 /* TagPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagPicker.swift; sourceTree = "<group>"; };
+		5FDBDF31247F0B66001F9130 /* TogglControllerLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglControllerLogin.swift; sourceTree = "<group>"; };
+		5FDBDF33247F13BB001F9130 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5FDBDF35247F2340001F9130 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
+		5FE693BD2564843E008407AF /* TogglTimer3MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimer3MacApp.swift; sourceTree = "<group>"; };
+		5FE693C125648441008407AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FE693C425648441008407AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FE693C625648441008407AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE693C725648441008407AF /* TogglTimer3Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TogglTimer3Mac.entitlements; sourceTree = "<group>"; };
+		5FE693D025648442008407AF /* TogglTimer3MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimer3MacTests.swift; sourceTree = "<group>"; };
+		5FE693D225648442008407AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE693DB25648442008407AF /* TogglTimer3MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglTimer3MacUITests.swift; sourceTree = "<group>"; };
+		5FE693DD25648442008407AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FE694A825648743008407AF /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		5FE965C5255CB6E200531E0F /* String+fontlengh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+fontlengh.swift"; sourceTree = "<group>"; };
+		5FFA88C124F044E700D3F7A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		5FFD4F42252BD1090001DCCE /* RunningWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningWidget.swift; sourceTree = "<group>"; };
+		5FFD4F44252BD1100001DCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FFD4F46252BD1100001DCCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FFD4F4A252BD1100001DCCE /* RunningWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunningWidgetExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1A3D822472FEF8007E564D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5F0ADC24F5661C00B5824F /* SwiftUI.framework in Frameworks */,
+				5FF237D6256497CB00AAD3D7 /* PopupView in Frameworks */,
+				5FE694B425649348008407AF /* Introspect in Frameworks */,
+				5F52C6A324E1D71800C9EA79 /* Intents.framework in Frameworks */,
+				5F9229E024980099005C91B0 /* KeychainSwift in Frameworks */,
+				5F52C6A524E1D71E00C9EA79 /* IntentsUI.framework in Frameworks */,
+				5F8BA70A24E1C39D00BDE7F1 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3D982472FEFF007E564D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3DA32472FEFF007E564D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF5B25CCB94B0059324C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33CF9525CCB9600059324C /* PopupView in Frameworks */,
+				5F33CF9125CCB9590059324C /* KeychainSwift in Frameworks */,
+				5F33CF9325CCB95D0059324C /* Introspect in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF6C25CCB94C0059324C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF7725CCB94C0059324C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1225B324E0E3B700715FD6 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				5F1225B424E0E3CC00715FD6 /* Sources */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		5F1225B424E0E3CC00715FD6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5F1225B524E0E3CC00715FD6 /* Pages */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		5F1225B524E0E3CC00715FD6 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				5F1225B624E0E3CC00715FD6 /* PagesBuilder.swift */,
+				5F1225B724E0E3CC00715FD6 /* PageControl.swift */,
+				5F1225B824E0E3CC00715FD6 /* Pages.swift */,
+				5F1225B924E0E3CC00715FD6 /* PageViewController.swift */,
+				5F1225BA24E0E3CC00715FD6 /* ModelPages.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		5F1A3D7C2472FEF8007E564D = {
+			isa = PBXGroup;
+			children = (
+				5FFD4F4A252BD1100001DCCE /* RunningWidgetExtension.entitlements */,
+				5F8BA70824E1BBBA00BDE7F1 /* TogglTimer3Release.entitlements */,
+				5FAA11B12475A8C600245894 /* Views */,
+				5F1A3D872472FEF8007E564D /* Timer3 */,
+				5F1A3D9E2472FEFF007E564D /* Timer3Tests */,
+				5F1A3DA92472FEFF007E564D /* Timer3UITests */,
+				5F52C6D024E1DACA00C9EA79 /* TogglIntents */,
+				5F52C6DA24E1DACA00C9EA79 /* TogglIntentsUI */,
+				5FFD4F41252BD1090001DCCE /* RunningWidget */,
+				5FE693BC2564843E008407AF /* TogglTimer3Mac */,
+				5FE693CF25648442008407AF /* TogglTimer3MacTests */,
+				5FE693DA25648442008407AF /* TogglTimer3MacUITests */,
+				5F33CF5F25CCB94B0059324C /* TimerMac */,
+				5F33CF7225CCB94C0059324C /* TimerMacTests */,
+				5F33CF7D25CCB94C0059324C /* TimerMacUITests */,
+				5F9229572497C14A005C91B0 /* Frameworks */,
+				5F1A3D862472FEF8007E564D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F1A3D862472FEF8007E564D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A3D852472FEF8007E564D /* TogglTimer3.app */,
+				5F1A3D9B2472FEFF007E564D /* TogglTimer3Tests.xctest */,
+				5F1A3DA62472FEFF007E564D /* TogglTimer3UITests.xctest */,
+				5F33CF5E25CCB94B0059324C /* TimerMac.app */,
+				5F33CF6F25CCB94C0059324C /* TimerMacTests.xctest */,
+				5F33CF7A25CCB94C0059324C /* TimerMacUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F1A3D872472FEF8007E564D /* Timer3 */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA8E8E24782596000A4572 /* Timer3.entitlements */,
+				5F1A3DC52473000E007E564D /* Contoller */,
+				5F1A3DB82472FF1B007E564D /* Model */,
+				5F1A3D882472FEF8007E564D /* AppDelegate.swift */,
+				5F1A3D8A2472FEF8007E564D /* SceneDelegate.swift */,
+				5F414B87251006DB00F41D70 /* TogglTimer3App.swift */,
+				5F1A3D8E2472FEFF007E564D /* Assets.xcassets */,
+				5F1A3D932472FEFF007E564D /* LaunchScreen.storyboard */,
+				5F1A3D962472FEFF007E564D /* Info.plist */,
+				5F1A3D902472FEFF007E564D /* Preview Content */,
+			);
+			path = Timer3;
+			sourceTree = "<group>";
+		};
+		5F1A3D902472FEFF007E564D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A3D912472FEFF007E564D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F1A3D9E2472FEFF007E564D /* Timer3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A3D9F2472FEFF007E564D /* Timer3Tests.swift */,
+				5F1A3DA12472FEFF007E564D /* Info.plist */,
+			);
+			path = Timer3Tests;
+			sourceTree = "<group>";
+		};
+		5F1A3DA92472FEFF007E564D /* Timer3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A3DAA2472FEFF007E564D /* Timer3UITests.swift */,
+				5F1A3DAC2472FEFF007E564D /* Info.plist */,
+			);
+			path = Timer3UITests;
+			sourceTree = "<group>";
+		};
+		5F1A3DB82472FF1B007E564D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FA71CAE2473085800BB8237 /* DataWrapper.swift */,
+				5F1A3DC32472FF64007E564D /* TogglObject.swift */,
+				5F1A3DBA2472FF36007E564D /* TogglTimer.swift */,
+				5F1A3DBB2472FF37007E564D /* TogglProject.swift */,
+				5F1A3DB92472FF36007E564D /* TogglTag.swift */,
+				5F1A3DBC2472FF37007E564D /* TogglUser.swift */,
+				5F1A3DBD2472FF37007E564D /* TogglWorkspace.swift */,
+				5F3B7C33247B462A0040723D /* HexToColor.swift */,
+				5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */,
+				5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */,
+				5F94AA3025F96D8800F76C2D /* TimeBlock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F1A3DC52473000E007E564D /* Contoller */ = {
+			isa = PBXGroup;
+			children = (
+				5FFA88C124F044E700D3F7A7 /* ViewModel.swift */,
+				5F9BA7BC24EB2C4D0015A4D5 /* ViewModelState.swift */,
+				5F414B862510048500F41D70 /* Extensions */,
+				5F069BDF2479CFAA008C60B9 /* CloudData.swift */,
+				5F9BA7B824EAFD280015A4D5 /* AuthManager.swift */,
+				5FC003CD247F32E20040BC26 /* LoginStore.swift */,
+				5F1A3DC62473001E007E564D /* TogglRequest.swift */,
+				5F9BA7BA24EB04340015A4D5 /* APIClient.swift */,
+				5F1A3DC824730071007E564D /* TogglController.swift */,
+				5FA71CB62473103A00BB8237 /* RunningTimerStore.swift */,
+				5FA71CD3247330D600BB8237 /* UserStore.swift */,
+				5FDA8E8F24785A3B000A4572 /* TimeEntriesStore.swift */,
+				5FDBDF31247F0B66001F9130 /* TogglControllerLogin.swift */,
+				5FA71CB424730FC500BB8237 /* SavedTimersStore.swift */,
+				5F07BA5724B294BC008AB78D /* RecentTimersStore.swift */,
+				5F94AA1E25F96BFE00F76C2D /* CalFetcher.swift */,
+				5F94AA2725F96C8D00F76C2D /* DateRange.swift */,
+			);
+			path = Contoller;
+			sourceTree = "<group>";
+		};
+		5F1A91AA25C87FBC0002E131 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A91AB25C87FBC0002E131 /* ViewControllerResolver.swift */,
+				5F1A91AC25C87FBC0002E131 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		5F2C21CE24D9E89400DD171B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				5F1225B324E0E3B700715FD6 /* Pages */,
+				5F2914A724D9F4B800607A8F /* CalendarCellView.swift */,
+				5F2914A924D9F5C500607A8F /* WeekView.swift */,
+				5F1225AF24E0CD0100715FD6 /* CalendarPageView.swift */,
+				5F1225B124E0D43900715FD6 /* CalendarModel.swift */,
+				5FAF5FBE26042175002E0BA1 /* Week.swift */,
+				5FAF5FC726042190002E0BA1 /* Weeks.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		5F33CF5F25CCB94B0059324C /* TimerMac */ = {
+			isa = PBXGroup;
+			children = (
+				5F33CF6425CCB94C0059324C /* Assets.xcassets */,
+				5F33CF6925CCB94C0059324C /* Info.plist */,
+				5F33CF6A25CCB94C0059324C /* TimerMac.entitlements */,
+				5F33CF6625CCB94C0059324C /* Preview Content */,
+			);
+			path = TimerMac;
+			sourceTree = "<group>";
+		};
+		5F33CF6625CCB94C0059324C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5F33CF6725CCB94C0059324C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F33CF7225CCB94C0059324C /* TimerMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F33CF7325CCB94C0059324C /* TimerMacTests.swift */,
+				5F33CF7525CCB94C0059324C /* Info.plist */,
+			);
+			path = TimerMacTests;
+			sourceTree = "<group>";
+		};
+		5F33CF7D25CCB94C0059324C /* TimerMacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F33CF7E25CCB94C0059324C /* TimerMacUITests.swift */,
+				5F33CF8025CCB94C0059324C /* Info.plist */,
+			);
+			path = TimerMacUITests;
+			sourceTree = "<group>";
+		};
+		5F414B862510048500F41D70 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F1E093B248C47E4006CAB3E /* Date+starts.swift */,
+				5F5832D524EF28AE002C2343 /* Array+grouping.swift */,
+				5FB8A61B248457210042473B /* String+Base64.swift */,
+				5FE965C5255CB6E200531E0F /* String+fontlengh.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F4B377825116929002AAF01 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				5F4B3776251160DF002AAF01 /* TabView.swift */,
+				5F4B37792511695E002AAF01 /* Tab.swift */,
+				5F4B377B25116975002AAF01 /* BottomBar.swift */,
+				5F4B377D25116982002AAF01 /* SideBar.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		5F52C6D024E1DACA00C9EA79 /* TogglIntents */ = {
+			isa = PBXGroup;
+			children = (
+				5F52C6E824E1DACA00C9EA79 /* TogglIntents.entitlements */,
+				5F52C6D124E1DACA00C9EA79 /* IntentHandler.swift */,
+				5F52C6EF24E1DB0600C9EA79 /* StartTimerIntents.intentdefinition */,
+				5F52C6D324E1DACA00C9EA79 /* Info.plist */,
+			);
+			path = TogglIntents;
+			sourceTree = "<group>";
+		};
+		5F52C6DA24E1DACA00C9EA79 /* TogglIntentsUI */ = {
+			isa = PBXGroup;
+			children = (
+				5F52C6E424E1DACA00C9EA79 /* TogglIntentsUI.entitlements */,
+				5F52C6DB24E1DACA00C9EA79 /* IntentViewController.swift */,
+				5F52C6DD24E1DACA00C9EA79 /* MainInterface.storyboard */,
+				5F52C6E024E1DACA00C9EA79 /* Info.plist */,
+			);
+			path = TogglIntentsUI;
+			sourceTree = "<group>";
+		};
+		5F8CD72024F94E6100F35B56 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				5F069BD424798BA2008C60B9 /* RearrangeButton.swift */,
+				5FA296ED24B3974200255A8A /* DoneButton.swift */,
+				5FDA8E5924781580000A4572 /* AddButton.swift */,
+				5F07BA5524B27F98008AB78D /* DragHandle.swift */,
+				5FD1908A24CF1E21003F4A2A /* ActionButton.swift */,
+				5F3B7C35247B47360040723D /* TimerContextMenu.swift */,
+				5FA71CBE247314D000BB8237 /* StopButton.swift */,
+				5F69550D24BA11A6003A0ACA /* DateRangePicker.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		5F8CD72124F94E9100F35B56 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				5FA960A024F84BBB00816DE1 /* BottomListPadding.swift */,
+				5FA71CBC2473143100BB8237 /* TagsView.swift */,
+				5FA02C892475CCE100E740D7 /* TimerDetailsView.swift */,
+				5FA960A224F8526F00816DE1 /* TimeRange.swift */,
+				5FDBDF35247F2340001F9130 /* TimeView.swift */,
+				5F4844D2250EE87300DBE38F /* SectionHeader.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		5F8CD72224F94F4E00F35B56 /* Running */ = {
+			isa = PBXGroup;
+			children = (
+				5F03B8E724CCDF1B0024616B /* BottomSheetView.swift */,
+				5F98901224F9509400E80F86 /* RunningTimerView.swift */,
+				5F1A558A24CDEA6000131578 /* NowPlayingView.swift */,
+			);
+			path = Running;
+			sourceTree = "<group>";
+		};
+		5F9229572497C14A005C91B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5F0ADB24F5661C00B5824F /* SwiftUI.framework */,
+				5F52C6A424E1D71E00C9EA79 /* IntentsUI.framework */,
+				5F52C6A224E1D71800C9EA79 /* Intents.framework */,
+				5F8BA70924E1C39D00BDE7F1 /* CloudKit.framework */,
+				5F9229582497C14A005C91B0 /* NotificationCenter.framework */,
+				5F70DC3624D9E2BC0018CCBA /* WidgetKit.framework */,
+				5F70DC3824D9E2BC0018CCBA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FAA11B12475A8C600245894 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F1A91AA25C87FBC0002E131 /* SearchBar */,
+				5F8959A2248C0A0400DF5389 /* UIConstants.swift */,
+				5F2C21CE24D9E89400DD171B /* Calendar */,
+				5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */,
+				5F8CD72224F94F4E00F35B56 /* Running */,
+				5FAAE21F249BEF2C006A4744 /* Settings */,
+				5FDA8E9124785D0A000A4572 /* Entries */,
+				5FAA11B22475A8D100245894 /* Home */,
+				5FAA11B52475A94500245894 /* Inspector */,
+				5F4B377825116929002AAF01 /* Tabs */,
+				5FAA11B32475A8F600245894 /* Shared */,
+				5FC003CB247F32A40040BC26 /* ContentView.swift */,
+				5FDBDF33247F13BB001F9130 /* LoginView.swift */,
+				5FC003D1247F34FA0040BC26 /* SplashScreen.swift */,
+				5FA02A9425B4EFBC003CFF1C /* Haptics.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5FAA11B22475A8D100245894 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5FA71CC624732D7100BB8237 /* HomeView.swift */,
+				5FA71CC824732D7B00BB8237 /* TimerView.swift */,
+				5F8959A4248C15BD00DF5389 /* AddFirstTimerView.swift */,
+				5FAAE214249B03CB006A4744 /* UIFont+preferredFont.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5FAA11B32475A8F600245894 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5F8CD72124F94E9100F35B56 /* Labels */,
+				5F8CD72024F94E6100F35B56 /* Controls */,
+				5F414B89251009C900F41D70 /* DisplayError.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5FAA11B52475A94500245894 /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				5FA71CCE24732E8600BB8237 /* TimerInspectorViewSmall.swift */,
+				5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */,
+				5F1D2F1F2475B2D3003B257A /* ProjectPicker.swift */,
+				5FDB34122475FDBB00296388 /* TagPicker.swift */,
+				5F1D2F1D2475B005003B257A /* FormCell.swift */,
+				5F03B8E924CD0A710024616B /* TimerInspectorView.swift */,
+				5F060F8B2481CCD600D7CA52 /* ProjectInspector.swift */,
+				5FD808622481D1BB00489557 /* ColorPickerView.swift */,
+				5FCB29AC255C613900148518 /* ProjectsView.swift */,
+				5FE694A825648743008407AF /* ProjectsViewModel.swift */,
+			);
+			path = Inspector;
+			sourceTree = "<group>";
+		};
+		5FAAE21F249BEF2C006A4744 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5FAAE21C249BEF15006A4744 /* SettingsView.swift */,
+				5FA02A8E25B4EF31003CFF1C /* ProfileRow.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5FDA8E9124785D0A000A4572 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				5FDA8E9224785D17000A4572 /* EntriesView.swift */,
+				5FB7538725D1ABD300DAD6BB /* CalendarEntriesView.swift */,
+				5FB7539025D1AC2800DAD6BB /* CalendarEntriesViewModel.swift */,
+				5F8CD71E24F94CE700F35B56 /* TimerGroupView.swift */,
+				5F17AD8D252A23BE0093B7DD /* SegmentedBarView.swift */,
+				5F17AD92252A24150093B7DD /* SegmentedBarViewModel.swift */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
+		5FE693BC2564843E008407AF /* TogglTimer3Mac */ = {
+			isa = PBXGroup;
+			children = (
+				5FE693BD2564843E008407AF /* TogglTimer3MacApp.swift */,
+				5FE693C125648441008407AF /* Assets.xcassets */,
+				5FE693C625648441008407AF /* Info.plist */,
+				5FE693C725648441008407AF /* TogglTimer3Mac.entitlements */,
+				5FE693C325648441008407AF /* Preview Content */,
+			);
+			path = TogglTimer3Mac;
+			sourceTree = "<group>";
+		};
+		5FE693C325648441008407AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5FE693C425648441008407AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5FE693CF25648442008407AF /* TogglTimer3MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FE693D025648442008407AF /* TogglTimer3MacTests.swift */,
+				5FE693D225648442008407AF /* Info.plist */,
+			);
+			path = TogglTimer3MacTests;
+			sourceTree = "<group>";
+		};
+		5FE693DA25648442008407AF /* TogglTimer3MacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5FE693DB25648442008407AF /* TogglTimer3MacUITests.swift */,
+				5FE693DD25648442008407AF /* Info.plist */,
+			);
+			path = TogglTimer3MacUITests;
+			sourceTree = "<group>";
+		};
+		5FFD4F41252BD1090001DCCE /* RunningWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5FFD4F42252BD1090001DCCE /* RunningWidget.swift */,
+				5FFD4F44252BD1100001DCCE /* Assets.xcassets */,
+				5FFD4F46252BD1100001DCCE /* Info.plist */,
+			);
+			path = RunningWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F1A3D842472FEF8007E564D /* TogglTimer3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1A3DAF2472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3" */;
+			buildPhases = (
+				5F1A3D812472FEF8007E564D /* Sources */,
+				5F1A3D822472FEF8007E564D /* Frameworks */,
+				5F1A3D832472FEF8007E564D /* Resources */,
+				5FAAE1E5249806FC006A4744 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TogglTimer3;
+			packageProductDependencies = (
+				5F9229DF24980099005C91B0 /* KeychainSwift */,
+				5FE694B325649348008407AF /* Introspect */,
+				5FF237D5256497CB00AAD3D7 /* PopupView */,
+			);
+			productName = Timer3;
+			productReference = 5F1A3D852472FEF8007E564D /* TogglTimer3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F1A3D9A2472FEFF007E564D /* TogglTimer3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1A3DB22472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3Tests" */;
+			buildPhases = (
+				5F1A3D972472FEFF007E564D /* Sources */,
+				5F1A3D982472FEFF007E564D /* Frameworks */,
+				5F1A3D992472FEFF007E564D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1A3D9D2472FEFF007E564D /* PBXTargetDependency */,
+			);
+			name = TogglTimer3Tests;
+			productName = Timer3Tests;
+			productReference = 5F1A3D9B2472FEFF007E564D /* TogglTimer3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F1A3DA52472FEFF007E564D /* TogglTimer3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1A3DB52472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3UITests" */;
+			buildPhases = (
+				5F1A3DA22472FEFF007E564D /* Sources */,
+				5F1A3DA32472FEFF007E564D /* Frameworks */,
+				5F1A3DA42472FEFF007E564D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1A3DA82472FEFF007E564D /* PBXTargetDependency */,
+			);
+			name = TogglTimer3UITests;
+			productName = Timer3UITests;
+			productReference = 5F1A3DA62472FEFF007E564D /* TogglTimer3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5F33CF5D25CCB94B0059324C /* TimerMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F33CF8725CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMac" */;
+			buildPhases = (
+				5F33CF5A25CCB94B0059324C /* Sources */,
+				5F33CF5B25CCB94B0059324C /* Frameworks */,
+				5F33CF5C25CCB94B0059324C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimerMac;
+			packageProductDependencies = (
+				5F33CF9025CCB9590059324C /* KeychainSwift */,
+				5F33CF9225CCB95D0059324C /* Introspect */,
+				5F33CF9425CCB9600059324C /* PopupView */,
+			);
+			productName = TimerMac;
+			productReference = 5F33CF5E25CCB94B0059324C /* TimerMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F33CF6E25CCB94C0059324C /* TimerMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F33CF8825CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMacTests" */;
+			buildPhases = (
+				5F33CF6B25CCB94C0059324C /* Sources */,
+				5F33CF6C25CCB94C0059324C /* Frameworks */,
+				5F33CF6D25CCB94C0059324C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F33CF7125CCB94C0059324C /* PBXTargetDependency */,
+			);
+			name = TimerMacTests;
+			productName = TimerMacTests;
+			productReference = 5F33CF6F25CCB94C0059324C /* TimerMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F33CF7925CCB94C0059324C /* TimerMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F33CF8925CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMacUITests" */;
+			buildPhases = (
+				5F33CF7625CCB94C0059324C /* Sources */,
+				5F33CF7725CCB94C0059324C /* Frameworks */,
+				5F33CF7825CCB94C0059324C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F33CF7C25CCB94C0059324C /* PBXTargetDependency */,
+			);
+			name = TimerMacUITests;
+			productName = TimerMacUITests;
+			productReference = 5F33CF7A25CCB94C0059324C /* TimerMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1A3D7D2472FEF8007E564D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1220;
+				ORGANIZATIONNAME = "Ryan Rosica";
+				TargetAttributes = {
+					5F1A3D842472FEF8007E564D = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					5F1A3D9A2472FEFF007E564D = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 5F1A3D842472FEF8007E564D;
+					};
+					5F1A3DA52472FEFF007E564D = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 5F1A3D842472FEF8007E564D;
+					};
+					5F33CF5D25CCB94B0059324C = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					5F33CF6E25CCB94C0059324C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5F33CF5D25CCB94B0059324C;
+					};
+					5F33CF7925CCB94C0059324C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 5F33CF5D25CCB94B0059324C;
+					};
+				};
+			};
+			buildConfigurationList = 5F1A3D802472FEF8007E564D /* Build configuration list for PBXProject "TogglTimer3" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F1A3D7C2472FEF8007E564D;
+			packageReferences = (
+				5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
+			productRefGroup = 5F1A3D862472FEF8007E564D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F1A3D842472FEF8007E564D /* TogglTimer3 */,
+				5F1A3D9A2472FEFF007E564D /* TogglTimer3Tests */,
+				5F1A3DA52472FEFF007E564D /* TogglTimer3UITests */,
+				5F33CF5D25CCB94B0059324C /* TimerMac */,
+				5F33CF6E25CCB94C0059324C /* TimerMacTests */,
+				5F33CF7925CCB94C0059324C /* TimerMacUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1A3D832472FEF8007E564D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1A3D952472FEFF007E564D /* LaunchScreen.storyboard in Resources */,
+				5F1A3D922472FEFF007E564D /* Preview Assets.xcassets in Resources */,
+				5F1A3D8F2472FEFF007E564D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3D992472FEFF007E564D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3DA42472FEFF007E564D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF5C25CCB94B0059324C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33CF6825CCB94C0059324C /* Preview Assets.xcassets in Resources */,
+				5F33CF6525CCB94C0059324C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF6D25CCB94C0059324C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF7825CCB94C0059324C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1A3D812472FEF8007E564D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FC003D2247F34FA0040BC26 /* SplashScreen.swift in Sources */,
+				5FCB29AD255C613900148518 /* ProjectsView.swift in Sources */,
+				5FA960A324F8526F00816DE1 /* TimeRange.swift in Sources */,
+				5F9BA7B924EAFD290015A4D5 /* AuthManager.swift in Sources */,
+				5FA02C8A2475CCE100E740D7 /* TimerDetailsView.swift in Sources */,
+				5F1A3D892472FEF8007E564D /* AppDelegate.swift in Sources */,
+				5FDA8E9324785D17000A4572 /* EntriesView.swift in Sources */,
+				5F17AD8E252A23BE0093B7DD /* SegmentedBarView.swift in Sources */,
+				5FA71CB72473103A00BB8237 /* RunningTimerStore.swift in Sources */,
+				5F5832DA24EF3A64002C2343 /* TogglTimerDay.swift in Sources */,
+				5FD808632481D1BB00489557 /* ColorPickerView.swift in Sources */,
+				5F03B8EA24CD0A710024616B /* TimerInspectorView.swift in Sources */,
+				5F1A3DC72473001E007E564D /* TogglRequest.swift in Sources */,
+				5F4B3777251160DF002AAF01 /* TabView.swift in Sources */,
+				5F1225BC24E0E3CC00715FD6 /* PageControl.swift in Sources */,
+				5F8959A3248C0A0400DF5389 /* UIConstants.swift in Sources */,
+				5F17AD93252A24150093B7DD /* SegmentedBarViewModel.swift in Sources */,
+				5FAF5FBF26042175002E0BA1 /* Week.swift in Sources */,
+				5F1A3DC02472FF37007E564D /* TogglProject.swift in Sources */,
+				5F1A3D8B2472FEF8007E564D /* SceneDelegate.swift in Sources */,
+				5F1225BB24E0E3CC00715FD6 /* PagesBuilder.swift in Sources */,
+				5FA71CC724732D7100BB8237 /* HomeView.swift in Sources */,
+				5FDA8E9024785A3B000A4572 /* TimeEntriesStore.swift in Sources */,
+				5FAF5FC826042190002E0BA1 /* Weeks.swift in Sources */,
+				5FAAE215249B03CB006A4744 /* UIFont+preferredFont.swift in Sources */,
+				5FA71CCF24732E8600BB8237 /* TimerInspectorViewSmall.swift in Sources */,
+				5F1D2F202475B2D3003B257A /* ProjectPicker.swift in Sources */,
+				5F8CD71F24F94CE700F35B56 /* TimerGroupView.swift in Sources */,
+				5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */,
+				5FA71CC924732D7B00BB8237 /* TimerView.swift in Sources */,
+				5F4B377C25116975002AAF01 /* BottomBar.swift in Sources */,
+				5FAF5FB02603FEE9002E0BA1 /* View+if.swift in Sources */,
+				5FA02A8F25B4EF31003CFF1C /* ProfileRow.swift in Sources */,
+				5F1A3DC924730071007E564D /* TogglController.swift in Sources */,
+				5F3B7C34247B462A0040723D /* HexToColor.swift in Sources */,
+				5FA71CBD2473143100BB8237 /* TagsView.swift in Sources */,
+				5FA71CB524730FC500BB8237 /* SavedTimersStore.swift in Sources */,
+				5FDB34132475FDBB00296388 /* TagPicker.swift in Sources */,
+				5F060F8C2481CCD600D7CA52 /* ProjectInspector.swift in Sources */,
+				5F1A3DC22472FF37007E564D /* TogglWorkspace.swift in Sources */,
+				5F8959A5248C15BD00DF5389 /* AddFirstTimerView.swift in Sources */,
+				5F4B377A2511695E002AAF01 /* Tab.swift in Sources */,
+				5FFA88C224F044E800D3F7A7 /* ViewModel.swift in Sources */,
+				5F414B88251006DB00F41D70 /* TogglTimer3App.swift in Sources */,
+				5F5832D624EF28AE002C2343 /* Array+grouping.swift in Sources */,
+				5F1A3DC42472FF64007E564D /* TogglObject.swift in Sources */,
+				5F1A558B24CDEA6000131578 /* NowPlayingView.swift in Sources */,
+				5F94AA1F25F96BFE00F76C2D /* CalFetcher.swift in Sources */,
+				5FA71CAF2473085800BB8237 /* DataWrapper.swift in Sources */,
+				5F1A3DBE2472FF37007E564D /* TogglTag.swift in Sources */,
+				5FD1908B24CF1E21003F4A2A /* ActionButton.swift in Sources */,
+				5F9BA7BD24EB2C4D0015A4D5 /* ViewModelState.swift in Sources */,
+				5F069BE02479CFAA008C60B9 /* CloudData.swift in Sources */,
+				5F1E093C248C47E4006CAB3E /* Date+starts.swift in Sources */,
+				5F1225BD24E0E3CC00715FD6 /* Pages.swift in Sources */,
+				5FDA8E5A24781580000A4572 /* AddButton.swift in Sources */,
+				5F2914AA24D9F5C500607A8F /* WeekView.swift in Sources */,
+				5FA71CD4247330D600BB8237 /* UserStore.swift in Sources */,
+				5F4B377E25116982002AAF01 /* SideBar.swift in Sources */,
+				5F1A91AD25C87FBC0002E131 /* ViewControllerResolver.swift in Sources */,
+				5F1D2F1E2475B005003B257A /* FormCell.swift in Sources */,
+				5FA960A124F84BBB00816DE1 /* BottomListPadding.swift in Sources */,
+				5FE965C6255CB6E200531E0F /* String+fontlengh.swift in Sources */,
+				5F03B8E824CCDF1B0024616B /* BottomSheetView.swift in Sources */,
+				5F9BA7BB24EB04340015A4D5 /* APIClient.swift in Sources */,
+				5F069BD524798BA2008C60B9 /* RearrangeButton.swift in Sources */,
+				5F2914A824D9F4B800607A8F /* CalendarCellView.swift in Sources */,
+				5F3B7C36247B47360040723D /* TimerContextMenu.swift in Sources */,
+				5FA296EE24B3974200255A8A /* DoneButton.swift in Sources */,
+				5F07BA5624B27F98008AB78D /* DragHandle.swift in Sources */,
+				5FDBDF36247F2340001F9130 /* TimeView.swift in Sources */,
+				5FAAE21D249BEF15006A4744 /* SettingsView.swift in Sources */,
+				5FA02A9525B4EFBC003CFF1C /* Haptics.swift in Sources */,
+				5F1225BF24E0E3CC00715FD6 /* ModelPages.swift in Sources */,
+				5F414B8A251009C900F41D70 /* DisplayError.swift in Sources */,
+				5FC003CE247F32E20040BC26 /* LoginStore.swift in Sources */,
+				5F1225B024E0CD0100715FD6 /* CalendarPageView.swift in Sources */,
+				5FDBDF32247F0B66001F9130 /* TogglControllerLogin.swift in Sources */,
+				5FB8A61C248457210042473B /* String+Base64.swift in Sources */,
+				5FC003CC247F32A40040BC26 /* ContentView.swift in Sources */,
+				5F1A91AE25C87FBC0002E131 /* SearchBar.swift in Sources */,
+				5F94AA2825F96C8D00F76C2D /* DateRange.swift in Sources */,
+				5F4844D3250EE87400DBE38F /* SectionHeader.swift in Sources */,
+				5FB7538825D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */,
+				5F69550E24BA11A6003A0ACA /* DateRangePicker.swift in Sources */,
+				5FB7539125D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */,
+				5FE694A925648743008407AF /* ProjectsViewModel.swift in Sources */,
+				5F94AA3125F96D8800F76C2D /* TimeBlock.swift in Sources */,
+				5F1225BE24E0E3CC00715FD6 /* PageViewController.swift in Sources */,
+				5F1A3DC12472FF37007E564D /* TogglUser.swift in Sources */,
+				5F1225B224E0D43900715FD6 /* CalendarModel.swift in Sources */,
+				5FDBDF34247F13BB001F9130 /* LoginView.swift in Sources */,
+				5F98901324F9509400E80F86 /* RunningTimerView.swift in Sources */,
+				5F1A3DBF2472FF37007E564D /* TogglTimer.swift in Sources */,
+				5F07BA5824B294BC008AB78D /* RecentTimersStore.swift in Sources */,
+				5FA71CBF247314D000BB8237 /* StopButton.swift in Sources */,
+				5F4175AB24DB54AD000CFD2E /* ManageAccountView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3D972472FEFF007E564D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1A3DA02472FEFF007E564D /* Timer3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1A3DA22472FEFF007E564D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1A3DAB2472FEFF007E564D /* Timer3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF5A25CCB94B0059324C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33D00625CCB9D60059324C /* ProjectsViewModel.swift in Sources */,
+				5F33D04025CCB9EA0059324C /* RunningTimerStore.swift in Sources */,
+				5F33D03525CCB9EA0059324C /* AuthManager.swift in Sources */,
+				5F33D02325CCB9E20059324C /* ContentView.swift in Sources */,
+				5F33D05025CCB9F20059324C /* AppDelegate.swift in Sources */,
+				5F33CFD725CCB9C60059324C /* SettingsView.swift in Sources */,
+				5F33CFBC25CCB9BB0059324C /* PagesBuilder.swift in Sources */,
+				5F94AA2025F96BFE00F76C2D /* CalFetcher.swift in Sources */,
+				5F33CFC325CCB9BF0059324C /* CalendarModel.swift in Sources */,
+				5F33CFBA25CCB9BB0059324C /* ModelPages.swift in Sources */,
+				5F33CFD825CCB9C60059324C /* ProfileRow.swift in Sources */,
+				5F33D00525CCB9D60059324C /* ProjectPicker.swift in Sources */,
+				5F33CFC625CCB9BF0059324C /* WeekView.swift in Sources */,
+				5F33CFEA25CCB9CD0059324C /* TimerView.swift in Sources */,
+				5F33D02125CCB9E20059324C /* DoneButton.swift in Sources */,
+				5F33CFEC25CCB9CD0059324C /* AddFirstTimerView.swift in Sources */,
+				5F33D03625CCB9EA0059324C /* TogglControllerLogin.swift in Sources */,
+				5F33CFC725CCB9BF0059324C /* CalendarCellView.swift in Sources */,
+				5F33D04E25CCB9F20059324C /* TogglObject.swift in Sources */,
+				5F33CFE125CCB9C90059324C /* EntriesView.swift in Sources */,
+				5F33CFA825CCB9B00059324C /* UIConstants.swift in Sources */,
+				5F33D03725CCB9EA0059324C /* Date+starts.swift in Sources */,
+				5F33D03825CCB9EA0059324C /* TogglRequest.swift in Sources */,
+				5F33D02425CCB9E20059324C /* SplashScreen.swift in Sources */,
+				5F33CFFF25CCB9D60059324C /* ProjectInspector.swift in Sources */,
+				5F33D04C25CCB9F20059324C /* TogglTimer.swift in Sources */,
+				5F33CFF425CCB9D10059324C /* SectionHeader.swift in Sources */,
+				5F33D04225CCB9EA0059324C /* Array+grouping.swift in Sources */,
+				5F33D03D25CCB9EA0059324C /* LoginStore.swift in Sources */,
+				5F94AA2925F96C8D00F76C2D /* DateRange.swift in Sources */,
+				5FB7538925D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */,
+				5F33D02225CCB9E20059324C /* StopButton.swift in Sources */,
+				5F33D01025CCB9DA0059324C /* SideBar.swift in Sources */,
+				5F33D05225CCB9F20059324C /* TogglWorkspace.swift in Sources */,
+				5F33CFB125CCB9B60059324C /* SearchBar.swift in Sources */,
+				5F33CFC425CCB9BF0059324C /* CalendarPageView.swift in Sources */,
+				5F33D01A25CCB9E20059324C /* AddButton.swift in Sources */,
+				5FB7539225D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */,
+				5F33D04925CCB9F20059324C /* TogglTimerGroup.swift in Sources */,
+				5F33D03E25CCB9EA0059324C /* TimeEntriesStore.swift in Sources */,
+				5F33D05525CCB9F20059324C /* TogglProject.swift in Sources */,
+				5F33D04D25CCB9F20059324C /* TogglTimerDay.swift in Sources */,
+				5F33D00225CCB9D60059324C /* ProjectsView.swift in Sources */,
+				5F33D02C25CCB9E60059324C /* ViewModelState.swift in Sources */,
+				5F33D05425CCB9F20059324C /* TogglTimer3App.swift in Sources */,
+				5F33CFE225CCB9C90059324C /* TimerGroupView.swift in Sources */,
+				5F33D00425CCB9D60059324C /* TimerInspectorView.swift in Sources */,
+				5FAF5FB12603FEE9002E0BA1 /* View+if.swift in Sources */,
+				5F33D03425CCB9EA0059324C /* SavedTimersStore.swift in Sources */,
+				5F33D01D25CCB9E20059324C /* DateRangePicker.swift in Sources */,
+				5F33D01B25CCB9E20059324C /* ActionButton.swift in Sources */,
+				5F33CFF325CCB9D10059324C /* TimeRange.swift in Sources */,
+				5F33D04B25CCB9F20059324C /* DataWrapper.swift in Sources */,
+				5F33D01925CCB9E20059324C /* DragHandle.swift in Sources */,
+				5F33D04125CCB9EA0059324C /* UserStore.swift in Sources */,
+				5F33CFE925CCB9CD0059324C /* HomeView.swift in Sources */,
+				5F33D00F25CCB9DA0059324C /* TabView.swift in Sources */,
+				5FAF5FC026042175002E0BA1 /* Week.swift in Sources */,
+				5F33CFE025CCB9C90059324C /* SegmentedBarViewModel.swift in Sources */,
+				5F33CFB025CCB9B60059324C /* ViewControllerResolver.swift in Sources */,
+				5F33CFF825CCB9D10059324C /* TimerDetailsView.swift in Sources */,
+				5F33CFF625CCB9D10059324C /* TagsView.swift in Sources */,
+				5F33D03325CCB9EA0059324C /* TogglController.swift in Sources */,
+				5F33D03925CCB9EA0059324C /* APIClient.swift in Sources */,
+				5F33D01C25CCB9E20059324C /* RearrangeButton.swift in Sources */,
+				5F33CFF525CCB9D10059324C /* TimeView.swift in Sources */,
+				5F33D01E25CCB9E20059324C /* LoginView.swift in Sources */,
+				5F33D00325CCB9D60059324C /* TimerInspectorViewSmall.swift in Sources */,
+				5F33D03C25CCB9EA0059324C /* CloudData.swift in Sources */,
+				5F33D04F25CCB9F20059324C /* TogglUser.swift in Sources */,
+				5F33CFC525CCB9BF0059324C /* ManageAccountView.swift in Sources */,
+				5F33D01125CCB9DA0059324C /* Tab.swift in Sources */,
+				5F33D05125CCB9F20059324C /* TogglTag.swift in Sources */,
+				5F33D00125CCB9D60059324C /* ColorPickerView.swift in Sources */,
+				5F33D02B25CCB9E60059324C /* ViewModel.swift in Sources */,
+				5F33D00725CCB9D60059324C /* TagPicker.swift in Sources */,
+				5F94AA3225F96D8800F76C2D /* TimeBlock.swift in Sources */,
+				5F33D05325CCB9F20059324C /* SceneDelegate.swift in Sources */,
+				5FAF5FC926042190002E0BA1 /* Weeks.swift in Sources */,
+				5F33D03B25CCB9EA0059324C /* RecentTimersStore.swift in Sources */,
+				5F33D03F25CCB9EA0059324C /* String+Base64.swift in Sources */,
+				5F33D00E25CCB9DA0059324C /* BottomBar.swift in Sources */,
+				5F33D01F25CCB9E20059324C /* TimerContextMenu.swift in Sources */,
+				5F33D00025CCB9D60059324C /* FormCell.swift in Sources */,
+				5F33D01825CCB9E20059324C /* DisplayError.swift in Sources */,
+				5F33CFF725CCB9D10059324C /* BottomListPadding.swift in Sources */,
+				5F33CFDF25CCB9C90059324C /* SegmentedBarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF6B25CCB94C0059324C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33CF7425CCB94C0059324C /* TimerMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F33CF7625CCB94C0059324C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F33CF7F25CCB94C0059324C /* TimerMacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1A3D9D2472FEFF007E564D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1A3D842472FEF8007E564D /* TogglTimer3 */;
+			targetProxy = 5F1A3D9C2472FEFF007E564D /* PBXContainerItemProxy */;
+		};
+		5F1A3DA82472FEFF007E564D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F1A3D842472FEF8007E564D /* TogglTimer3 */;
+			targetProxy = 5F1A3DA72472FEFF007E564D /* PBXContainerItemProxy */;
+		};
+		5F33CF7125CCB94C0059324C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F33CF5D25CCB94B0059324C /* TimerMac */;
+			targetProxy = 5F33CF7025CCB94C0059324C /* PBXContainerItemProxy */;
+		};
+		5F33CF7C25CCB94C0059324C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F33CF5D25CCB94B0059324C /* TimerMac */;
+			targetProxy = 5F33CF7B25CCB94C0059324C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F1A3D932472FEFF007E564D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F1A3D942472FEFF007E564D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5F52C6DD24E1DACA00C9EA79 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F52C6DE24E1DACA00C9EA79 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F1A3DAD2472FEFF007E564D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F1A3DAE2472FEFF007E564D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F1A3DB02472FEFF007E564D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Timer3/Timer3.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Timer3/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Timer3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TogglTimer;
+				PRODUCT_NAME = TogglTimer3;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F1A3DB12472FEFF007E564D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TogglTimer3Release.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Timer3/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Timer3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TogglTimer;
+				PRODUCT_NAME = TogglTimer3;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F1A3DB32472FEFF007E564D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = Timer3Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.Timer3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TogglTimer3.app/TogglTimer3";
+			};
+			name = Debug;
+		};
+		5F1A3DB42472FEFF007E564D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = Timer3Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.Timer3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TogglTimer3.app/TogglTimer3";
+			};
+			name = Release;
+		};
+		5F1A3DB62472FEFF007E564D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = Timer3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.Timer3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Timer3;
+			};
+			name = Debug;
+		};
+		5F1A3DB72472FEFF007E564D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = Timer3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.Timer3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Timer3;
+			};
+			name = Release;
+		};
+		5F33CF8125CCB94C0059324C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimerMac/TimerMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TimerMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5F33CF8225CCB94C0059324C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimerMac/TimerMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"TimerMac/Preview Content\"";
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimerMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5F33CF8325CCB94C0059324C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = TimerMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerMac.app/Contents/MacOS/TimerMac";
+			};
+			name = Debug;
+		};
+		5F33CF8425CCB94C0059324C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = TimerMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerMac.app/Contents/MacOS/TimerMac";
+			};
+			name = Release;
+		};
+		5F33CF8525CCB94C0059324C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = TimerMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimerMac;
+			};
+			name = Debug;
+		};
+		5F33CF8625CCB94C0059324C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7D6V9TFU6X;
+				INFOPLIST_FILE = TimerMacUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanrosica.TimerMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TimerMac;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1A3D802472FEF8007E564D /* Build configuration list for PBXProject "TogglTimer3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1A3DAD2472FEFF007E564D /* Debug */,
+				5F1A3DAE2472FEFF007E564D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1A3DAF2472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1A3DB02472FEFF007E564D /* Debug */,
+				5F1A3DB12472FEFF007E564D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1A3DB22472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1A3DB32472FEFF007E564D /* Debug */,
+				5F1A3DB42472FEFF007E564D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F1A3DB52472FEFF007E564D /* Build configuration list for PBXNativeTarget "TogglTimer3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1A3DB62472FEFF007E564D /* Debug */,
+				5F1A3DB72472FEFF007E564D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F33CF8725CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F33CF8125CCB94C0059324C /* Debug */,
+				5F33CF8225CCB94C0059324C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F33CF8825CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F33CF8325CCB94C0059324C /* Debug */,
+				5F33CF8425CCB94C0059324C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F33CF8925CCB94C0059324C /* Build configuration list for PBXNativeTarget "TimerMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F33CF8525CCB94C0059324C /* Debug */,
+				5F33CF8625CCB94C0059324C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+		5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F33CF9025CCB9590059324C /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		5F33CF9225CCB95D0059324C /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		5F33CF9425CCB9600059324C /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		5F9229DF24980099005C91B0 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		5FE694B325649348008407AF /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		5FF237D5256497CB00AAD3D7 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5F1A3D7D2472FEF8007E564D /* Project object */;
+}

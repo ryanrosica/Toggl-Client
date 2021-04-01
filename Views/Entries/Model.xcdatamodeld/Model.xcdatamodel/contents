@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SavedTimer" representedClassName="SavedTimer" syncable="YES" codeGenerationType="class">
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="pid" optional="YES"/>
+        <attribute name="pname" optional="YES"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="SavedTimer" positionX="-63" positionY="-18" width="128" height="104"/>
+    </elements>
+</model>
