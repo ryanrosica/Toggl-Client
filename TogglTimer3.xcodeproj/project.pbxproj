@@ -196,6 +196,12 @@
 		5FC003CE247F32E20040BC26 /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003CD247F32E20040BC26 /* LoginStore.swift */; };
 		5FC003D2247F34FA0040BC26 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC003D1247F34FA0040BC26 /* SplashScreen.swift */; };
 		5FCB29AD255C613900148518 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB29AC255C613900148518 /* ProjectsView.swift */; };
+		5FCE1D6D26166090000A0130 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D6C26166080000A0130 /* HTTPMethod.swift */; };
+		5FCE1D6E26166090000A0130 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D6C26166080000A0130 /* HTTPMethod.swift */; };
+		5FCE1D76261660AD000A0130 /* TogglError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D75261660AD000A0130 /* TogglError.swift */; };
+		5FCE1D77261660AD000A0130 /* TogglError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D75261660AD000A0130 /* TogglError.swift */; };
+		5FCE1D85261660C5000A0130 /* TogglResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D84261660C5000A0130 /* TogglResponse.swift */; };
+		5FCE1D86261660C5000A0130 /* TogglResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCE1D84261660C5000A0130 /* TogglResponse.swift */; };
 		5FD1908B24CF1E21003F4A2A /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD1908A24CF1E21003F4A2A /* ActionButton.swift */; };
 		5FD808632481D1BB00489557 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD808622481D1BB00489557 /* ColorPickerView.swift */; };
 		5FDA8E5A24781580000A4572 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDA8E5924781580000A4572 /* AddButton.swift */; };
@@ -380,6 +386,9 @@
 		5FC003CD247F32E20040BC26 /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		5FC003D1247F34FA0040BC26 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		5FCB29AC255C613900148518 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		5FCE1D6C26166080000A0130 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		5FCE1D75261660AD000A0130 /* TogglError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglError.swift; sourceTree = "<group>"; };
+		5FCE1D84261660C5000A0130 /* TogglResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglResponse.swift; sourceTree = "<group>"; };
 		5FD1908A24CF1E21003F4A2A /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		5FD808622481D1BB00489557 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		5FDA8E5924781580000A4572 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
@@ -594,6 +603,9 @@
 			children = (
 				5FFA88C124F044E700D3F7A7 /* ViewModel.swift */,
 				5F9BA7BC24EB2C4D0015A4D5 /* ViewModelState.swift */,
+				5FCE1D75261660AD000A0130 /* TogglError.swift */,
+				5FCE1D84261660C5000A0130 /* TogglResponse.swift */,
+				5FCE1D6C26166080000A0130 /* HTTPMethod.swift */,
 				5F414B862510048500F41D70 /* Extensions */,
 				5F069BDF2479CFAA008C60B9 /* CloudData.swift */,
 				5F9BA7B824EAFD280015A4D5 /* AuthManager.swift */,
@@ -1158,6 +1170,7 @@
 				5F1A3D8B2472FEF8007E564D /* SceneDelegate.swift in Sources */,
 				5F1225BB24E0E3CC00715FD6 /* PagesBuilder.swift in Sources */,
 				5FA71CC724732D7100BB8237 /* HomeView.swift in Sources */,
+				5FCE1D85261660C5000A0130 /* TogglResponse.swift in Sources */,
 				5FDA8E9024785A3B000A4572 /* TimeEntriesStore.swift in Sources */,
 				5FAF5FC826042190002E0BA1 /* Weeks.swift in Sources */,
 				5FAAE215249B03CB006A4744 /* UIFont+preferredFont.swift in Sources */,
@@ -1165,7 +1178,9 @@
 				5F1D2F202475B2D3003B257A /* ProjectPicker.swift in Sources */,
 				5F8CD71F24F94CE700F35B56 /* TimerGroupView.swift in Sources */,
 				5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */,
+				5FCE1D76261660AD000A0130 /* TogglError.swift in Sources */,
 				5FA71CC924732D7B00BB8237 /* TimerView.swift in Sources */,
+				5FCE1D6D26166090000A0130 /* HTTPMethod.swift in Sources */,
 				5F4B377C25116975002AAF01 /* BottomBar.swift in Sources */,
 				5FAF5FB02603FEE9002E0BA1 /* View+if.swift in Sources */,
 				5FA02A8F25B4EF31003CFF1C /* ProfileRow.swift in Sources */,
@@ -1269,6 +1284,7 @@
 				5F33CFD825CCB9C60059324C /* ProfileRow.swift in Sources */,
 				5F33D00525CCB9D60059324C /* ProjectPicker.swift in Sources */,
 				5F33CFC625CCB9BF0059324C /* WeekView.swift in Sources */,
+				5FCE1D77261660AD000A0130 /* TogglError.swift in Sources */,
 				5F33CFEA25CCB9CD0059324C /* TimerView.swift in Sources */,
 				5F33D02125CCB9E20059324C /* DoneButton.swift in Sources */,
 				5F33CFEC25CCB9CD0059324C /* AddFirstTimerView.swift in Sources */,
@@ -1287,11 +1303,13 @@
 				5F33D03D25CCB9EA0059324C /* LoginStore.swift in Sources */,
 				5F94AA2925F96C8D00F76C2D /* DateRange.swift in Sources */,
 				5FB7538925D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */,
+				5FCE1D86261660C5000A0130 /* TogglResponse.swift in Sources */,
 				5F33D02225CCB9E20059324C /* StopButton.swift in Sources */,
 				5F33D01025CCB9DA0059324C /* SideBar.swift in Sources */,
 				5F33D05225CCB9F20059324C /* TogglWorkspace.swift in Sources */,
 				5F33CFB125CCB9B60059324C /* SearchBar.swift in Sources */,
 				5F33CFC425CCB9BF0059324C /* CalendarPageView.swift in Sources */,
+				5FCE1D6E26166090000A0130 /* HTTPMethod.swift in Sources */,
 				5F33D01A25CCB9E20059324C /* AddButton.swift in Sources */,
 				5FB7539225D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */,
 				5F33D04925CCB9F20059324C /* TogglTimerGroup.swift in Sources */,
