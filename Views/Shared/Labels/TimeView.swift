@@ -12,6 +12,7 @@ struct TimeView: View {
     var timer: TogglTimer
     @State var duration = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var currentTime: String?
+    var color = UIConstants.Colors.secondaryFont
 
     var body: some View {
         Text("\(currentTime ?? timer.currentTime)")
@@ -19,7 +20,7 @@ struct TimeView: View {
                 self.currentTime = self.timer.currentTime
             })
             .font(UIConstants.Fonts.body)
-            .foregroundColor(UIConstants.Colors.secondaryFont)
+            .foregroundColor(color)
             .frame(width: width)
     }
     

@@ -17,14 +17,8 @@ struct HomeView: View {
     @State var isEditable = false
     @Environment(\.colorScheme) var colorScheme
     @StateObject var searchBar: SearchBar = SearchBar()
-
     
     var body: some View {
-        list
-            .padding(.bottom, runningStore.isRunning ? 80 : 0)
-    }
-    
-    var list: some View {
         List {
             recentsHorizontalList.textCase(nil)
             pinnedTimerList
@@ -36,12 +30,11 @@ struct HomeView: View {
         .navigationBarTitle(title)
         .displayError(view: runningStore)
         .add(self.searchBar)
+        .padding(.bottom, runningStore.isRunning ? 80 : 0)
         .onReceive(searchBar.$text, perform: { text in
             savedTimers.filter = text
             recentStore.filter = text
-    
         })
-
     }
     
     var recentsHorizontalList: some View {
@@ -62,8 +55,6 @@ struct HomeView: View {
                                 .padding(.horizontal, sideScrollingCardMargin)
                                 .shadow(color: colorScheme == .dark ? .clear : Color(.lightGray).opacity(0.5), radius: 10, x: 0, y: 5)
                         }
-
-
                     }
                 }
                 
@@ -77,13 +68,14 @@ struct HomeView: View {
     var pinnedTimerList: some View {
         Section {
             pinnedHeader
-            
-            
             if (self.savedTimers.saved.count == 0) { AddFirstTimerView(action: addTimer) }
-            
             ForEach(self.savedTimers.filtered, id: \.id) { timer in
                 Button(action: {self.runningStore.start(timer: timer)}) {
-                    TimerView(timer: timer, tappable: !isEditable)
+                    TimerView(
+                        timer: timer,
+                        tappable: !isEditable,
+                        isRunning: runningStore.runningTimer?.hasTheSameTemplate(as: timer) ?? false
+                    )
                         .contextMenu {
                             ContextMenuDeleteButton { self.savedTimers.remove(timer: timer) }
                             ContextMenuEditButton { edit(timer: timer)}
@@ -99,9 +91,7 @@ struct HomeView: View {
     var pinnedHeader: some View {
         HStack {
             SectionHeader(text: "Pinned Timers")
-            
             Spacer()
-            
             if (!self.isEditable) {
                 Menu {
                     ContextMenuEditButton { self.isEditable.toggle() }.textCase(nil)
@@ -115,9 +105,7 @@ struct HomeView: View {
                     .foregroundColor(UIConstants.Colors.theme)
                     .onTapGesture {
                         withAnimation(.easeInOut) { self.isEditable.toggle() }
-
                     }
-                
             }
         }
     }

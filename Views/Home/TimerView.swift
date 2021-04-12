@@ -11,13 +11,20 @@ import SwiftUI
 struct TimerView: View {
     var timer: TogglTimer
     var tappable: Bool
+    var isRunning = false
+    @EnvironmentObject var runningStore: RunningTimerStore
     
     var body: some View {
         HStack(spacing: 12) {
-            Rectangle()
+            RoundedRectangle(cornerRadius: 2)
                 .font(.system(size: 46))
                 .foregroundColor(timer.project?.color())
-                .frame(width: 6)
+                .frame(width: isRunning ? 80 : 6)
+                .frame(height: isRunning ? 30 : nil)
+                .overlay(
+                    isRunning ?
+                        AnyView(TimeView(timer: runningStore.runningTimer ?? TogglTimer(), color: .white)) : AnyView(EmptyView())
+                )
             TimerDetailsView(timer: self.timer)
             Spacer()
             if(tappable) {

@@ -35,7 +35,6 @@ extension TabsView {
     var reportsView: some View {
         EntriesView(entriesStore: TimeEntriesStore())
             .navigationTitle("Reports")
-            
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
             .overlay(nowPlayingView)
         

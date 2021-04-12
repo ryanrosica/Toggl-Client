@@ -21,6 +21,7 @@ struct SideBar<T: View>: View {
             }
             .navigationTitle(title)
             .listStyle(SidebarListStyle())
+
         }
         .accentColor(accent)
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
