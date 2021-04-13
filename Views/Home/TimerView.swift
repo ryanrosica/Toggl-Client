@@ -19,18 +19,29 @@ struct TimerView: View {
             RoundedRectangle(cornerRadius: 2)
                 .font(.system(size: 46))
                 .foregroundColor(timer.project?.color())
-                .frame(width: isRunning ? 80 : 6)
-                .frame(height: isRunning ? 30 : nil)
-                .overlay(
-                    isRunning ?
-                        AnyView(TimeView(timer: runningStore.runningTimer ?? TogglTimer(), color: .white)) : AnyView(EmptyView())
-                )
+                .frame(width: 6)
+                .frame(height:nil)
+
             TimerDetailsView(timer: self.timer)
             Spacer()
             if(tappable) {
-                Image(systemName: secondaryImage)
-                    .foregroundColor(imageColor)
-                    .font(imageFont)
+                if (isRunning) {
+                    Circle()
+                        .foregroundColor(timer.project?.color())
+                        .frame(width: 12, height: 12 )
+                        .animation(.easeInOut(duration: 0.3))
+                        .transition(AnyTransition.scale)
+
+                }
+                else {
+                    Image(systemName: secondaryImage)
+                        .foregroundColor(imageColor)
+                        .font(imageFont)
+                        .animation(.easeInOut)
+                        .transition(AnyTransition.scale)
+                }
+
+
             }
         }
         .frame(height: height)

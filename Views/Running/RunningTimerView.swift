@@ -13,7 +13,8 @@ struct RunningTimerView: View {
     @State var editing = false
     @EnvironmentObject var store: RunningTimerStore
     @Environment(\.colorScheme) var colorScheme
-    
+    @Namespace private var animation
+
 
     var body: some View {
         HStack {
@@ -21,6 +22,7 @@ struct RunningTimerView: View {
             Spacer()
             self.timeAndStop
         }
+
         .frame(height: height)
         .sheet(isPresented: $editing) {
             self.timerInspecterView

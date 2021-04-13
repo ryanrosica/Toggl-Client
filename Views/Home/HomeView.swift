@@ -42,7 +42,7 @@ struct HomeView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     Spacer().frame(width: sideScrollingSpacerSize)
-                    ForEach(self.recentStore.filtered, id: \.self) { timer in
+                    ForEach(self.recentStore.entries, id: \.self) { timer in
                         Menu(content: {
                             ContextMenuPinButton(action: { self.savedTimers.add(timer: timer) } )
                             ContextMenuPlayButton(action: { self.runningStore.start(timer: timer) } )
@@ -69,7 +69,7 @@ struct HomeView: View {
         Section {
             pinnedHeader
             if (self.savedTimers.saved.count == 0) { AddFirstTimerView(action: addTimer) }
-            ForEach(self.savedTimers.filtered, id: \.id) { timer in
+            ForEach(self.savedTimers.saved, id: \.id) { timer in
                 Button(action: {self.runningStore.start(timer: timer)}) {
                     TimerView(
                         timer: timer,

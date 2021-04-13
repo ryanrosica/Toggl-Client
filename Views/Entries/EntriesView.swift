@@ -125,6 +125,11 @@ struct EntriesView: View {
                                     entriesStore: self.entriesStore,
                                     openAfterDeleted: $openAfterDeleted
                                 )
+
+                            }
+                            .onDelete {
+                                entriesStore.deleteTimers(in: day, index: $0.first!)
+
                             }
                         }
                     }

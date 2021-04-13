@@ -48,17 +48,25 @@ struct BottomSheetView<Content: View, SmallContent: View> : View {
         self._isOpen = isOpen
         self._isShowing = showing
     }
+    @Namespace private var ani
 
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 DragHandle().padding(3)
                 self.smallContent
+
                 Spacer().frame(height: 18)
+
                 self.content
+
+
             }
+            .matchedGeometryEffect(id: "running", in: ani)
+
             .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
-            .background(VisualEffectView(effect: UIBlurEffect(style: .systemMaterial)))
+//            .background(VisualEffectView(effect: UIBlurEffect(style: .systemMaterial)))
+            .background(Color(.tertiarySystemGroupedBackground))
             .overlay(
                 RoundedRectangle(
                     cornerRadius: Constants.radius
@@ -69,11 +77,12 @@ struct BottomSheetView<Content: View, SmallContent: View> : View {
                 )
             )
             .cornerRadius(Constants.radius)
-            .shadow(color: Color(.gray).opacity(0.3), radius: 10, x: 0, y: 0)
 
             
             .frame(height: geometry.size.height, alignment: .bottom)
-            .animation(animation ? .interactiveSpring(response: 0.3, dampingFraction: 0.59, blendDuration: 0.7) : .none)
+//            .animation(animation ? .interactiveSpring(response: 0.3, dampingFraction: 0.59, blendDuration: 0.7) : .none)
+            .animation(animation ? .interactiveSpring(response: 0.3, dampingFraction: 0.7, blendDuration: 0.7) : .none)
+
             .offset(y: max(self.offset + self.translation, 0))
             .gesture(
                 DragGesture().updating(self.$translation) { value, state, _ in

@@ -153,6 +153,8 @@ extension TogglTimer {
         }
         
         try container.encode(project, forKey: .project)
+        try container.encode(duration, forKey: .duration)
+
     }
 }
 

@@ -27,7 +27,6 @@ struct StopButton: View {
                     }
                 }
                 .font(.system(size: 35))
-            
         }
     }
     

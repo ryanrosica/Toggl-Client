@@ -91,9 +91,28 @@ class TimeEntriesStore: ViewModel {
         self.state = .loaded
     }
     
+    var deleteMultipleCancellable: AnyCancellable?
+    func deleteMultiple(timers: [TogglTimer]) {
+        let ids = timers.map{ $0.id }
+        self.state = .loading
+        self.entries.removeAll(where: { ids.contains($0.id) })
+        let request = TogglRequest<TogglTimerData>(endpoint: .bulkTimeEntries(ids), httpMethod: .DELETE)
+        deleteCancellable = request.publisher?.sink (
+            receiveCompletion: recieveCompletion,
+            receiveValue: { timer in
+                self.state = .loaded
+            }
+        )
+        self.state = .loaded
+    }
+    
     func deleteTimer(in group: TogglTimerGroup, timerIndex: Int) {
         let timer = group.timers[timerIndex]
         delete(timer: timer)
+    }
+    func deleteTimers(in day: TogglTimerDay, index: Int) {
+        let timers = day.timerGroups[index]
+        deleteMultiple(timers: timers.timers)
     }
 
     func update(timer oldTimer: TogglTimer, to newTimer: TogglTimer) {

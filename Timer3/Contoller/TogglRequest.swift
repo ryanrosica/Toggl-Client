@@ -20,6 +20,7 @@ struct TogglRequest <T: Decodable> {
         case user
         case timeEntries (String, String)
         case projects
+        case bulkTimeEntries ([Int])
         
         func value() -> String {
             switch self {
@@ -37,6 +38,9 @@ struct TogglRequest <T: Decodable> {
                     return "me?with_related_data=true"
                 case .timeEntries (let startDate, let endDate):
                     return "time_entries?start_date=\(startDate)&end_date=\(endDate)"
+                case .bulkTimeEntries(let ids):
+                    let idsStrings = ids.map{ String($0) }
+                    return "time_entries/\(idsStrings.joined(separator: ","))"
                 case .projects:
                     return "projects"
 
