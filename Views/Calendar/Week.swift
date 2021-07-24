@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Week {
+struct Week: Hashable, Equatable {
     var startDate: Date
     let calendar = Calendar.autoupdatingCurrent
     func selectedDayInWeek(from date: Date) -> Int? {
@@ -21,6 +21,10 @@ struct Week {
             return calendar.dateComponents([.day], from: date).day
         }
         return nil
+    }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.startDate == rhs.startDate
     }
 
     func day(from dayNumber: Int) -> Date {

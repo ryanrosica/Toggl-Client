@@ -33,7 +33,7 @@ public class TogglController {
     func requestProject(pid: Int, completionHandler: @escaping (TogglProject?) -> Void) {
         print("Request Project")
 
-        let request = TogglRequest<TogglProjectData>(endpoint: .project(pid), httpMethod: .GET)
+        let request = TogglRequest<TogglProjectData>(endpoint: TogglEndpoint.project(pid), httpMethod: .GET)
         request.fetch {projectDataResponse in
             
             switch projectDataResponse {
@@ -50,7 +50,7 @@ public class TogglController {
     func requestRunning(completionHandler: @escaping (TogglTimer?) -> Void) {
         print("Request Running")
 
-        let request = TogglRequest<TogglTimerData>(endpoint: .currentTimeEntry, httpMethod: .GET)
+        let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.currentTimeEntry, httpMethod: .GET)
         request.fetch { timerDataResponse in
             switch timerDataResponse {
                 case .error(let error):
@@ -76,7 +76,7 @@ public class TogglController {
         
         do {
             let data = try JSONEncoder().encode(TogglTimerData(data: newTimer))
-            let request = TogglRequest<TogglTimerData>(endpoint: .timeEntry(timer.id), httpMethod: .PUT, data: data)
+            let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.timeEntry(timer.id), httpMethod: .PUT, data: data)
             request.fetch{_ in
                 completionHandler()
             }
@@ -106,7 +106,7 @@ public class TogglController {
     func stopRunning(timer: TogglTimer, completionHandler: @escaping () -> Void) {
         print("Request Stop Running")
 
-        let request = TogglRequest<TogglTimerData>(endpoint: .stopRunning(timer.id), httpMethod: .PUT)
+        let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.stopRunning(timer.id), httpMethod: .PUT)
         
         request.fetch { timer in
             completionHandler()
@@ -121,7 +121,7 @@ public class TogglController {
         do {
             let data = try JSONEncoder().encode(timerData)
            
-            let request = TogglRequest<TogglTimerData>(endpoint: .startTimer, httpMethod: .POST, data: data)
+            let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.startTimer, httpMethod: .POST, data: data)
             request.fetch {_ in
                 self.successHaptic()
                 completionHandler()
@@ -139,7 +139,7 @@ public class TogglController {
 
         let id = timer.id
                 
-        let request = TogglRequest<TogglTimerData> (endpoint: .timeEntry(id), httpMethod: .DELETE)
+        let request = TogglRequest<TogglTimerData> (endpoint: TogglEndpoint.timeEntry(id), httpMethod: .DELETE)
         
         request.fetch { timerResponse in
             switch timerResponse {
@@ -163,7 +163,7 @@ public class TogglController {
             return
         }
         print("Request User")
-        let request = TogglRequest<TogglUserData>(endpoint: .user, httpMethod: .GET)
+        let request = TogglRequest<TogglUserData>(endpoint: TogglEndpoint.user, httpMethod: .GET)
         request.fetch {userDataResponse in
             switch userDataResponse {
                 case .error(let error):
@@ -186,7 +186,7 @@ public class TogglController {
         let startISO8601 = iSO8601DateFormatter.string(from: startDate)
         let endISO8601 = iSO8601DateFormatter.string(from: endDate)
         
-        let request = TogglRequest<[TogglTimer]>(endpoint: .timeEntries(startISO8601, endISO8601), httpMethod: .GET)
+        let request = TogglRequest<[TogglTimer]>(endpoint: TogglEndpoint.timeEntries(startISO8601, endISO8601), httpMethod: .GET)
         
         request.fetch { entriesResponse in
             
@@ -227,7 +227,7 @@ public class TogglController {
 
         let pid = project.id 
         
-        let request = TogglRequest<TogglProject>(endpoint: .project(pid), httpMethod: .DELETE)
+        let request = TogglRequest<TogglProject>(endpoint: TogglEndpoint.project(pid), httpMethod: .DELETE)
         
         request.fetch { projectResponse in
             switch projectResponse {
@@ -248,7 +248,7 @@ public class TogglController {
         
         do {
             let projectJSON = try JSONEncoder().encode(projectData)
-            let request = TogglRequest<TogglProjectData>(endpoint: .project(pid), httpMethod: .PUT, data: projectJSON)
+            let request = TogglRequest<TogglProjectData>(endpoint: TogglEndpoint.project(pid), httpMethod: .PUT, data: projectJSON)
             request.fetch { projectDataResponse in
                 switch projectDataResponse {
                     case .error(let error):
@@ -276,7 +276,7 @@ public class TogglController {
         
         do {
             let projectJSON = try JSONEncoder().encode(projectData)
-            let request = TogglRequest<TogglProjectData>(endpoint: .projects, httpMethod: .POST, data: projectJSON)
+            let request = TogglRequest<TogglProjectData>(endpoint: TogglEndpoint.projects, httpMethod: .POST, data: projectJSON)
             request.fetch { projectDataResponse in
                 
                 switch projectDataResponse {

@@ -60,7 +60,7 @@ class TimeEntriesStore: ViewModel {
         let formatter = ISO8601DateFormatter()
         formatter.timeZone = .autoupdatingCurrent
         let request = TogglRequest<[TogglTimer]>(
-            endpoint: .timeEntries(
+            endpoint: TogglEndpoint.timeEntries(
                 formatter.string(from: self.dateRange.start),
                 formatter.string(from: adjustedEnd)
             ),
@@ -81,7 +81,7 @@ class TimeEntriesStore: ViewModel {
     func delete(timer: TogglTimer) {
         self.state = .loading
         self.entries.removeAll(where: {timer.id == $0.id})
-        let request = TogglRequest<TogglTimerData>(endpoint: .timeEntry(timer.id), httpMethod: .DELETE)
+        let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.timeEntry(timer.id), httpMethod: .DELETE)
         deleteCancellable = request.publisher?.sink (
             receiveCompletion: recieveCompletion,
             receiveValue: { timer in
@@ -96,7 +96,7 @@ class TimeEntriesStore: ViewModel {
         let ids = timers.map{ $0.id }
         self.state = .loading
         self.entries.removeAll(where: { ids.contains($0.id) })
-        let request = TogglRequest<TogglTimerData>(endpoint: .bulkTimeEntries(ids), httpMethod: .DELETE)
+        let request = TogglRequest<TogglTimerData>(endpoint: TogglEndpoint.bulkTimeEntries(ids), httpMethod: .DELETE)
         deleteCancellable = request.publisher?.sink (
             receiveCompletion: recieveCompletion,
             receiveValue: { timer in

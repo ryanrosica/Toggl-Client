@@ -27,7 +27,7 @@ class RunningTimerStore: ViewModel {
     var refreshCancellable: AnyCancellable?
     func refresh() {
         let refreshRequest = TogglRequest<TogglTimerData>(
-            endpoint: .currentTimeEntry,
+            endpoint: TogglEndpoint.currentTimeEntry,
             httpMethod: .GET
         )
         refreshCancellable?.cancel()
@@ -48,7 +48,7 @@ class RunningTimerStore: ViewModel {
         }
         self.runningTimer = timer
         let updateRequest = TogglRequest<TogglTimerData>(
-            endpoint: .timeEntry(runningID),
+            endpoint: TogglEndpoint.timeEntry(runningID),
             httpMethod: .PUT,
             dataWrapper: TogglTimerData(data: timer)
         )
@@ -69,7 +69,7 @@ class RunningTimerStore: ViewModel {
         }
         self.state = .loading
         let stopRequest = TogglRequest<TogglTimerData>(
-            endpoint: .stopRunning(id),
+            endpoint: TogglEndpoint.stopRunning(id),
             httpMethod: .PUT
         )
         stopCancellable = stopRequest.publisher?.sink(
@@ -84,11 +84,12 @@ class RunningTimerStore: ViewModel {
     
     var startCancellable: AnyCancellable?
     func start (timer: TogglTimer) {
+        
         startCancellable?.cancel()
         state = .loading
         self.runningTimer = timer
         let startRequest = TogglRequest<TogglTimerData>(
-            endpoint: .startTimer,
+            endpoint: TogglEndpoint.startTimer,
             httpMethod: .POST,
             dataWrapper: TogglTimerData(data: timer)
         )

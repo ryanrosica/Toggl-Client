@@ -8,6 +8,8 @@
 
 import SwiftUI
 struct TabsView: View {
+    @Namespace var namespace
+
     let savedStore = SavedTimersStore()
     @State var sheet = false
     
@@ -28,29 +30,76 @@ extension TabsView {
     @ViewBuilder
     var tabs: some View {
         Tab(view: homeView, title: "Home", image: "house.fill")
-        Tab(view: reportsView, title: "Entries", image: "chart.bar.fill")
+        Tab(view: entriesView, title: "Entries", image: "calendar")
+        Tab(view: reportsView, title: "Reports", image: "chart.bar.fill")
+        Tab(view: acccount, title: "Account", image: "person.crop.circle.fill")
         Tab(view: settingsView, title: "Settings", image: "gear")
     }
     
-    var reportsView: some View {
+    var entriesView: some View {
         EntriesView(entriesStore: TimeEntriesStore())
             .navigationTitle("Reports")
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
-            .overlay(nowPlayingView)
+//            .toolbar {
+//                ToolbarItem(placement: .bottomBar) {
+//                    RunningTimerView()
+//                }
+//            }
+//            .overlay(nowPlayingView.matchedGeometryEffect(id: "now", in: namespace))
         
+
+    }
+    
+    var acccount: some View {
+        List {
+            ProfileRow(name: UserStore.shared.user?.fullname ?? "", email: UserStore.shared.user?.email ?? "")
+            ManageAccountView()
+        }
+//        .toolbar {
+//            ToolbarItem(placement: .bottomBar) {
+//                RunningTimerView()
+//            }
+//        }
+//        .overlay(nowPlayingView.matchedGeometryEffect(id: "now", in: namespace))
+        .navigationTitle("Profile")
 
     }
     
     var homeView: some View {
         HomeView(savedTimers: savedStore, recentStore: RecentTimersStore()).navigationTitle("Home")
-            .overlay(nowPlayingView)
+//            .toolbar {
+//                ToolbarItem(placement: .status) {
+//                    RunningTimerView()
+//                        .frame(height:80)
+//
+//                }
+//
+//            }
+//            .overlay(nowPlayingView.matchedGeometryEffect(id: "now", in: namespace))
 
     }
     var settingsView: some View {
         SettingsView(savedTimersStore: savedStore)
-            .overlay(nowPlayingView)
+//            .toolbar {
+//                ToolbarItem(placement: .bottomBar) {
+//                    RunningTimerView()
+//                }
+//            }
+//            .overlay(nowPlayingView.matchedGeometryEffect(id: "now", in: namespace))
 
     }
+    
+    var reportsView: some View {
+        ReportsView()
+//            .toolbar {
+//                ToolbarItem(placement: .bottomBar) {
+//                    RunningTimerView()
+//                }
+//            }
+//            .overlay(nowPlayingView.matchedGeometryEffect(id: "now", in: namespace))
+
+    }
+    
     
     @ViewBuilder
     var nowPlayingView: some View {

@@ -12,6 +12,10 @@ struct TogglTimerDay: Identifiable {
     var id: Date { date }
 
     var timerGroups: [TogglTimerGroup]
+    
+    mutating func remove(at index: Int) {
+        timerGroups.remove(at: index)
+    }
     var date: Date  {
         return timerGroups[0].start!
     }

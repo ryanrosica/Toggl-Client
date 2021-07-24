@@ -11,6 +11,7 @@ import SwiftUI
 struct TimerDetailsView: View {
     var timer: TogglTimer
     var compact = true
+    var tags = true
     
     var body: some View {
         HStack {
@@ -24,11 +25,14 @@ struct TimerDetailsView: View {
                         .foregroundColor(.primary)
                 }
                 Spacer().frame(height: spacerHeight)
-                TagsView(
-                    tags: self.timer.tags ?? [],
-                    compact: compact,
-                    color: timer.color
-                )
+                if (tags) {
+                    
+                    TagsView(
+                        tags: self.timer.tags ?? [],
+                        compact: compact,
+                        color: timer.color
+                    )
+                }
             }
         }
         

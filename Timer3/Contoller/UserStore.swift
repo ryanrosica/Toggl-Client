@@ -18,6 +18,7 @@ class UserStore: ViewModel {
         refresh()
     }
 
+
     var addCancellable: AnyCancellable?
     func add(project: TogglProject) {
         addCancellable?.cancel()
@@ -25,7 +26,7 @@ class UserStore: ViewModel {
         guard let wid = user?.workspaces?[0].id else { return }
         project.wid = wid
         let request = TogglRequest<TogglProjectData>(
-            endpoint: .projects,
+            endpoint: TogglEndpoint.projects,
             httpMethod: .PUT,
             dataWrapper: TogglProjectData(data: project)
         )
@@ -42,7 +43,7 @@ class UserStore: ViewModel {
         let pid = project.id
         user?.projects?.removeAll(where: { $0.id == pid })
         let request = TogglRequest<TogglProjectData>(
-            endpoint: .project(pid),
+            endpoint: TogglEndpoint.project(pid),
             httpMethod: .DELETE
         )
         deleteCancellable = request.publisher?.sink(
@@ -63,7 +64,7 @@ class UserStore: ViewModel {
         refreshCancellable?.cancel()
         self.state = .loading
         let request = TogglRequest<TogglUserData>(
-            endpoint: .user,
+            endpoint: TogglEndpoint.user,
             httpMethod: .GET
         )
         refreshCancellable = request.publisher?.sink(
@@ -86,7 +87,7 @@ class UserStore: ViewModel {
     func updateProject(from project1: TogglProject, to project2: TogglProject) {
         updateProjectCancellable?.cancel()
         let request = TogglRequest<TogglProjectData> (
-            endpoint: .project(project1.id),
+            endpoint: TogglEndpoint.project(project1.id),
             httpMethod: .PUT,
             dataWrapper: TogglProjectData(data: project2)
         )
@@ -95,5 +96,7 @@ class UserStore: ViewModel {
             receiveValue: { _ in self.refresh() }
         )
     }
+    
+    
 }
 

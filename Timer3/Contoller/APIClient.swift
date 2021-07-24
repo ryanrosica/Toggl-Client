@@ -20,6 +20,10 @@ struct APIClient {
 
     struct URLResponseError: Error {
         var response: URLResponse
+        init (response: URLResponse) {
+            self.response = response
+            
+        }
     }
     
     
@@ -29,11 +33,14 @@ struct APIClient {
             .tryMap { result -> Response<T?> in
                 
                 if let result = result.response as? HTTPURLResponse {
+
                     if result.statusCode != successCode {
+                        print("DA CODE \(result.statusCode)")
                         throw URLResponseError(response: result)
                     }
                 }
                 
+
                 let value = try? JSONDecoder().decode(T.self, from: result.data)
                 return Response(value: value, response: result.response)
                 

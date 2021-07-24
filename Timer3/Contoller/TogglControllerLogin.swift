@@ -24,7 +24,7 @@ extension TogglController {
         }
         
         
-        let request = TogglRequest<TogglUserData>(endpoint: .user, httpMethod: .GET)
+        let request = TogglRequest<TogglUserData>(endpoint: TogglEndpoint.user, httpMethod: .GET)
         request.fetch { userResponse in
             switch userResponse {
                 case .error(let error):
@@ -44,7 +44,7 @@ extension TogglController {
     
     func login (username: String, password: String, completion: @escaping (LoginResult) -> Void) {
         let auth = AuthManager.auth(username: username, password: password)
-        let request = TogglRequest<TogglUserData>(endpoint: .user, httpMethod: .GET, auth: auth)
+        let request = TogglRequest<TogglUserData>(endpoint: TogglEndpoint.user, httpMethod: .GET, auth: auth)
 
         
         request.fetch { userDataResponse in

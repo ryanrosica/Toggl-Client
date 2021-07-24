@@ -26,7 +26,7 @@ struct StopButton: View {
                         self.action()
                     }
                 }
-                .font(.system(size: 35))
+                .font(.system(size: 30))
         }
     }
     

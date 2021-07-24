@@ -10,14 +10,15 @@ import SwiftUI
 
 struct CalendarPageView: View {
     @StateObject var weekCalendar = WeekCalendar()
-    @State var page: Int = 99
+    @State var page: Week = Week(from: Date())
+    @Binding var week: Week
     @Binding var selected: Date
     var body: some View {
         VStack(spacing: 0) {
             cal
         }
-        .onChange(of: selected) { _ in
-            scrollToSelected()
+        .onChange(of: week) { week in
+            print("the week \(week)")
         }
     }
     
@@ -32,37 +33,43 @@ struct CalendarPageView: View {
                 .font(UIConstants.Fonts.body)
                 .foregroundColor(UIConstants.Colors.theme)
                 .onTapGesture {
-                    self.selected = Date()
-                    self.page = 99
+                    withAnimation {
+                        self.selected = Date()
+
+                    }
                 }
         }
     }
     
     var cal: some View {
-        ModelPages(
-            weekCalendar.weeks.weeks,
-            currentPage: $page,
-            navigationOrientation: .horizontal,
-            transitionStyle: .scroll,
-            bounce: true,
-            wrap: false,
-            hasControl: false,
-            control: nil
-        ) { _, week  in
-            HStack {
-                Spacer()
-                WeekCalendarPageView(week: week, selectedDay: $selected)
-                Spacer()
+        TabView(selection: $week) {
+            ForEach(weekCalendar.weeks.weeks, id: \.self) { week in
+                HStack {
+                    Spacer()
+                    WeekCalendarPageView(week: week, selectedDay: $selected)
+                    Spacer()
+                }
             }
+
             
         }
+        .onAppear {
+            // WORKAROUND: simulate change of selection on appear !!
+            let value = page
+            page = Week(from: Date.distantPast)
+            DispatchQueue.main.async {
+                page = value
+            }
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .never))
         .frame(height: 70)
-        .animation(.none)
+        .animation(.easeInOut)
         
     }
     
     func scrollToSelected() {
-        self.page = weekCalendar.weeks.pageOf(date: selected) ?? 99
+        self.page = Week(from: selected)
     }
     
 }

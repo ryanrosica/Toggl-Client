@@ -29,7 +29,13 @@ enum DateRange: CustomStringConvertible {
     static var choices = ["Today", "Month", "Custom"]
     
     
+    func adjustBy(days: Int) -> DateRange{
+        let dayComp = DateComponents(day: days)
+        let start = Calendar.current.date(byAdding: dayComp, to: start)!
+        let end = Calendar.current.date(byAdding: dayComp, to: end)!
 
+        return .custom(start, end)
+    }
     
     var start: Date {
         switch(self) {

@@ -17,16 +17,24 @@ struct RunningTimerView: View {
 
 
     var body: some View {
-        HStack {
-            TimerDetailsView(timer: store.runningTimer ?? TogglTimer())
-            Spacer()
-            self.timeAndStop
-        }
+            HStack {
+                TimeView(timer: store.runningTimer ?? TogglTimer())
+                TimerDetailsView(timer: store.runningTimer ?? TogglTimer(), tags: false)
 
-        .frame(height: height)
-        .sheet(isPresented: $editing) {
-            self.timerInspecterView
-        }
+                Spacer()
+                stopButton
+
+
+            }
+//            .frame(height: height)
+            .sheet(isPresented: $editing) {
+                self.timerInspecterView
+            }
+            .onTapGesture {
+                editing = true
+            }
+        
+
     }
     
     var timerInspecterView: some View {

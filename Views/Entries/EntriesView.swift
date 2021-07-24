@@ -46,7 +46,7 @@ struct EntriesView: View {
                     .textCase(nil)
             }
         }
-        .pickerStyle(MenuPickerStyle())
+        .pickerStyle(SegmentedPickerStyle())
     }
 
 //    var body: some View {
@@ -57,7 +57,6 @@ struct EntriesView: View {
 //        .background(Color(.systemGroupedBackground))
 //    }
     var body: some View {
-        ScrollViewReader { value in
 //            VStack {
 //                Button("Scroll") {
 //                }
@@ -65,58 +64,26 @@ struct EntriesView: View {
 
             list
 
-        }
+        
     }
+    @State var offset: CGFloat = 100
     
     @ViewBuilder
     var list: some View {
-        List {
-            Section (header:
-                VStack(spacing: 0) {
-                    Divider()
-                        .animation(.none)
+        ScrollView {
+            VStack {
+                
+//                viewPicker
+//                    .background(Color(.tertiarySystemFill))
+//                
+                
+                SegmentedBarView(model: entriesStore.barModel)
+                    .frame(height: 5)
+                    .padding()
+                    .animation(.none)
 
-                    CalendarPageView(selected: bindingDate)
-                        .font(UIConstants.Fonts.body)
-                        .animation(.none)
-
-                    Divider()
-                        .animation(.none)
-                    
-                    SegmentedBarView(model: entriesStore.barModel)
-                        .frame(height: 5)
-                        .padding()
-                        .animation(.none)
-
-                    
-                    Divider()
-                        .animation(.none)
-
-
-                }
-                .listRowInsets(EdgeInsets())
-                        .background(Color(.systemBackground))
-
-                .animation(.none)
-
-
-            
-            ){
 
                 if (entriesStore.entries.count > 0 && entriesStore.state == .loaded) {
-//                    ZStack {
-
-
-
-
-//                            .shadow(color: Color(.gray).opacity(0.3), radius: 10, x: 0, y: 0)
-//                        HStack {
-//                            Text(entriesStore.duration).font(UIConstants.Fonts.sectionHeader.bold())
-//                                .foregroundColor(.white)
-//                        }
-
-//                    }
-
                     if (!calendar) {
                         ForEach (entriesStore.days) { day in
                             ForEach (day.timerGroups) {
@@ -125,20 +92,25 @@ struct EntriesView: View {
                                     entriesStore: self.entriesStore,
                                     openAfterDeleted: $openAfterDeleted
                                 )
+                                .padding(12)
 
+                                .background (
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(Color(UIColor.secondarySystemGroupedBackground))
+//                                        .foregroundColor(Color(UIColor.tertiarySystemFill))
+                                )
+                                
                             }
                             .onDelete {
                                 entriesStore.deleteTimers(in: day, index: $0.first!)
 
                             }
+                            
                         }
                     }
                     else {
                         CalendarEntriesView(entriesStore: entriesStore)
                             .frame(height: 2000)
-
-                        
-
                     }
 
 
@@ -151,22 +123,56 @@ struct EntriesView: View {
                     }
                 }
                 
+                    
                 
-            }
+                Spacer()
 
-        }
-        .add(self.searchBar)
-
-        .animation(isAnimated ? .easeInOut : .none)
-        .listStyle(PlainListStyle())
-        .navigationBarTitle("Entry Log", displayMode: .large)
-        .onAppear {
-            UITableView.appearance().showsVerticalScrollIndicator = false
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.animated = true
             }
+    //        .add(self.searchBar)
+            .padding()
+            .animation(isAnimated ? .easeInOut : .none)
+            .listStyle(PlainListStyle())
+            .navigationBarTitle("Entry Log", displayMode: .inline)
+            .navigationBarItems(leading: backButton, trailing: fowardButton)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    calendarController
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    calendarController
+                }
+            }
+            .onAppear {
+                UITableView.appearance().showsVerticalScrollIndicator = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.animated = true
+                }
+            }
+            
         }
-        .navigationBarItems(leading: viewPicker, trailing: calendarController)
+        .background(Color(.systemGroupedBackground))
+
+
+    }
+    
+    var fowardButton: some View {
+        Button(action: {
+            entriesStore.dateRange = entriesStore.dateRange.adjustBy(days: 1)
+        }, label: {
+            Image(systemName: "chevron.right")
+        })
+        
+    }
+    
+    var backButton: some View {
+        Button(action: {
+            entriesStore.dateRange = entriesStore.dateRange.adjustBy(days: -1)
+        }, label: {
+            Image(systemName: "chevron.left")
+        })
+        
     }
     
 
@@ -187,6 +193,7 @@ struct EntriesView: View {
     
     var calendarController: some View {
         HStack {
+            
             DatePicker (
                 "",
                 selection: bindingDate,
@@ -225,6 +232,12 @@ struct EntriesView: View {
         }
     }
     
+    var bindingWeek: Binding<Week> {
+        return .init (
+            get: { return Week(from: entriesStore.dateRange.start) },
+            set: {_ in}
+        )
+    }
     
     
     var bindingDate: Binding<Date> {

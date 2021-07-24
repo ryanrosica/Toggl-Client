@@ -11,6 +11,8 @@ import SwiftUI
 struct NowPlayingView: View {
     @Binding var open: Bool
     @EnvironmentObject var runningStore: RunningTimerStore
+    @Environment(\.colorScheme) var colorScheme
+
     var showing: Binding<Bool> {
         return .init (
             get: {
@@ -43,29 +45,27 @@ struct NowPlayingView: View {
                 self.open = true
             }
     }
+    @ViewBuilder
     var sheet: some View {
-        BottomSheetView(isOpen: $open, showing: showing, maxHeight: maxHeight, minHeight: minHeight, smallContent: {
-            RunningTimerView()
-                .padding(.horizontal)
-        }) {
-            if (runningStore.isRunning && runningStore.state != .loading) {
-                TimerInspectorViewSmall (
-                    timer: .init(get: {self.runningStore.runningTimer ?? TogglTimer()},
-                                 set: {self.runningStore.update(timer: $0)}),
-                    open: $open, completion: {
-                        runningStore.refresh()
-                        
-                    }
-                )
-                .padding(.horizontal)
-                
+        if (runningStore.state == .loaded && runningStore.isRunning) {
+            VStack {
+                HStack {
+                    RunningTimerView()
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .foregroundColor(colorScheme == .dark ? Color(.tertiarySystemGroupedBackground) : Color(.systemBackground))
+                                .shadow(color: colorScheme == .dark ? .clear : Color(.lightGray).opacity(0.5), radius: 5, x: 0, y: 3)
+                        )
+                }
             }
         }
+        
     }
     
     
-    //MARK: Contants
+    //MARK: - Contants
     let maxHeight: CGFloat = 400
-    let minHeight: CGFloat = 85
+    let minHeight: CGFloat = 65
 }
 

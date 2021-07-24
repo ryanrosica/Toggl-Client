@@ -45,6 +45,7 @@ public struct TogglProjectData: DataWrapper {
     }
     
 }
+
 public struct TogglUserData: DataWrapper {
     var data: TogglUser
 }

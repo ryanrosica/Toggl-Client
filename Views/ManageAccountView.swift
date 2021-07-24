@@ -18,6 +18,7 @@ struct ManageAccountView: View {
                 projectCell(project: project)
             }
         }
+        
         DisclosureGroup("Tags") {
             ForEach(userStore.user?.tags ?? []) { tag in
                 tagCell(tag: tag)

@@ -51,8 +51,6 @@
 		5F33CF7425CCB94C0059324C /* TimerMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33CF7325CCB94C0059324C /* TimerMacTests.swift */; };
 		5F33CF7F25CCB94C0059324C /* TimerMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33CF7E25CCB94C0059324C /* TimerMacUITests.swift */; };
 		5F33CF9125CCB9590059324C /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9025CCB9590059324C /* KeychainSwift */; };
-		5F33CF9325CCB95D0059324C /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9225CCB95D0059324C /* Introspect */; };
-		5F33CF9525CCB9600059324C /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5F33CF9425CCB9600059324C /* PopupView */; };
 		5F33CFA825CCB9B00059324C /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A2248C0A0400DF5389 /* UIConstants.swift */; };
 		5F33CFB025CCB9B60059324C /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AB25C87FBC0002E131 /* ViewControllerResolver.swift */; };
 		5F33CFB125CCB9B60059324C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A91AC25C87FBC0002E131 /* SearchBar.swift */; };
@@ -181,6 +179,23 @@
 		5FA960A324F8526F00816DE1 /* TimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA960A224F8526F00816DE1 /* TimeRange.swift */; };
 		5FAAE215249B03CB006A4744 /* UIFont+preferredFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE214249B03CB006A4744 /* UIFont+preferredFont.swift */; };
 		5FAAE21D249BEF15006A4744 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE21C249BEF15006A4744 /* SettingsView.swift */; };
+		5FAE422A2628AECB00DEFB64 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42292628AECB00DEFB64 /* URLEndpoint.swift */; };
+		5FAE422B2628AECB00DEFB64 /* URLEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42292628AECB00DEFB64 /* URLEndpoint.swift */; };
+		5FAE42392628AF0400DEFB64 /* TogglEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42382628AF0400DEFB64 /* TogglEndpoint.swift */; };
+		5FAE423A2628AF0400DEFB64 /* TogglEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42382628AF0400DEFB64 /* TogglEndpoint.swift */; };
+		5FAE42422628B26800DEFB64 /* TogglSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42412628B26800DEFB64 /* TogglSummary.swift */; };
+		5FAE42432628B26800DEFB64 /* TogglSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42412628B26800DEFB64 /* TogglSummary.swift */; };
+		5FAE42512628C74100DEFB64 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42502628C74100DEFB64 /* Pie.swift */; };
+		5FAE42522628C74100DEFB64 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42502628C74100DEFB64 /* Pie.swift */; };
+		5FAE425B2628C79600DEFB64 /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 5FAE425A2628C79600DEFB64 /* Charts */; };
+		5FAE42712628CD6B00DEFB64 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42702628CD6B00DEFB64 /* ReportsView.swift */; };
+		5FAE42722628CD6B00DEFB64 /* ReportsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42702628CD6B00DEFB64 /* ReportsView.swift */; };
+		5FAE427A2628D3FB00DEFB64 /* Date+iso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42792628D3FB00DEFB64 /* Date+iso.swift */; };
+		5FAE427B2628D3FB00DEFB64 /* Date+iso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42792628D3FB00DEFB64 /* Date+iso.swift */; };
+		5FAE42832628D41800DEFB64 /* ReportsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42822628D41800DEFB64 /* ReportsFilter.swift */; };
+		5FAE42842628D41800DEFB64 /* ReportsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE42822628D41800DEFB64 /* ReportsFilter.swift */; };
+		5FAE428C2628D44900DEFB64 /* ReportsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE428B2628D44900DEFB64 /* ReportsStore.swift */; };
+		5FAE428D2628D44900DEFB64 /* ReportsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAE428B2628D44900DEFB64 /* ReportsStore.swift */; };
 		5FAF5FB02603FEE9002E0BA1 /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */; };
 		5FAF5FB12603FEE9002E0BA1 /* View+if.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */; };
 		5FAF5FBF26042175002E0BA1 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAF5FBE26042175002E0BA1 /* Week.swift */; };
@@ -214,9 +229,9 @@
 		5FDBDF34247F13BB001F9130 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF33247F13BB001F9130 /* LoginView.swift */; };
 		5FDBDF36247F2340001F9130 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBDF35247F2340001F9130 /* TimeView.swift */; };
 		5FE694A925648743008407AF /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE694A825648743008407AF /* ProjectsViewModel.swift */; };
-		5FE694B425649348008407AF /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 5FE694B325649348008407AF /* Introspect */; };
 		5FE965C6255CB6E200531E0F /* String+fontlengh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE965C5255CB6E200531E0F /* String+fontlengh.swift */; };
-		5FF237D6256497CB00AAD3D7 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5FF237D5256497CB00AAD3D7 /* PopupView */; };
+		5FED50612628A79D00364D1B /* ReportsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FED50602628A79D00364D1B /* ReportsEndpoint.swift */; };
+		5FED50622628A79D00364D1B /* ReportsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FED50602628A79D00364D1B /* ReportsEndpoint.swift */; };
 		5FFA88C224F044E800D3F7A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFA88C124F044E700D3F7A7 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -378,6 +393,14 @@
 		5FA960A224F8526F00816DE1 /* TimeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRange.swift; sourceTree = "<group>"; };
 		5FAAE214249B03CB006A4744 /* UIFont+preferredFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+preferredFont.swift"; sourceTree = "<group>"; };
 		5FAAE21C249BEF15006A4744 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5FAE42292628AECB00DEFB64 /* URLEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEndpoint.swift; sourceTree = "<group>"; };
+		5FAE42382628AF0400DEFB64 /* TogglEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglEndpoint.swift; sourceTree = "<group>"; };
+		5FAE42412628B26800DEFB64 /* TogglSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogglSummary.swift; sourceTree = "<group>"; };
+		5FAE42502628C74100DEFB64 /* Pie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
+		5FAE42702628CD6B00DEFB64 /* ReportsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportsView.swift; sourceTree = "<group>"; };
+		5FAE42792628D3FB00DEFB64 /* Date+iso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+iso.swift"; sourceTree = "<group>"; };
+		5FAE42822628D41800DEFB64 /* ReportsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsFilter.swift; sourceTree = "<group>"; };
+		5FAE428B2628D44900DEFB64 /* ReportsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsStore.swift; sourceTree = "<group>"; };
 		5FAF5FAF2603FEE9002E0BA1 /* View+if.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+if.swift"; sourceTree = "<group>"; };
 		5FAF5FBE26042175002E0BA1 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		5FAF5FC726042190002E0BA1 /* Weeks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weeks.swift; sourceTree = "<group>"; };
@@ -413,6 +436,7 @@
 		5FE693DD25648442008407AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FE694A825648743008407AF /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		5FE965C5255CB6E200531E0F /* String+fontlengh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+fontlengh.swift"; sourceTree = "<group>"; };
+		5FED50602628A79D00364D1B /* ReportsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsEndpoint.swift; sourceTree = "<group>"; };
 		5FFA88C124F044E700D3F7A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		5FFD4F42252BD1090001DCCE /* RunningWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningWidget.swift; sourceTree = "<group>"; };
 		5FFD4F44252BD1100001DCCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -426,8 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5F0ADC24F5661C00B5824F /* SwiftUI.framework in Frameworks */,
-				5FF237D6256497CB00AAD3D7 /* PopupView in Frameworks */,
-				5FE694B425649348008407AF /* Introspect in Frameworks */,
+				5FAE425B2628C79600DEFB64 /* Charts in Frameworks */,
 				5F52C6A324E1D71800C9EA79 /* Intents.framework in Frameworks */,
 				5F9229E024980099005C91B0 /* KeychainSwift in Frameworks */,
 				5F52C6A524E1D71E00C9EA79 /* IntentsUI.framework in Frameworks */,
@@ -453,9 +476,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F33CF9525CCB9600059324C /* PopupView in Frameworks */,
 				5F33CF9125CCB9590059324C /* KeychainSwift in Frameworks */,
-				5F33CF9325CCB95D0059324C /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +618,8 @@
 				5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */,
 				5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */,
 				5F94AA3025F96D8800F76C2D /* TimeBlock.swift */,
+				5FAE42412628B26800DEFB64 /* TogglSummary.swift */,
+				5FAE42822628D41800DEFB64 /* ReportsFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -624,6 +647,10 @@
 				5F07BA5724B294BC008AB78D /* RecentTimersStore.swift */,
 				5F94AA1E25F96BFE00F76C2D /* CalFetcher.swift */,
 				5F94AA2725F96C8D00F76C2D /* DateRange.swift */,
+				5FED50602628A79D00364D1B /* ReportsEndpoint.swift */,
+				5FAE42292628AECB00DEFB64 /* URLEndpoint.swift */,
+				5FAE42382628AF0400DEFB64 /* TogglEndpoint.swift */,
+				5FAE428B2628D44900DEFB64 /* ReportsStore.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -696,6 +723,7 @@
 				5FB8A61B248457210042473B /* String+Base64.swift */,
 				5FE965C5255CB6E200531E0F /* String+fontlengh.swift */,
 				5FCE1D93261662B7000A0130 /* Date+string.swift */,
+				5FAE42792628D3FB00DEFB64 /* Date+iso.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -788,6 +816,8 @@
 		5FAA11B12475A8C600245894 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FAE42702628CD6B00DEFB64 /* ReportsView.swift */,
+				5FAE42502628C74100DEFB64 /* Pie.swift */,
 				5F1A91AA25C87FBC0002E131 /* SearchBar */,
 				5F8959A2248C0A0400DF5389 /* UIConstants.swift */,
 				5F2C21CE24D9E89400DD171B /* Calendar */,
@@ -934,8 +964,7 @@
 			name = TogglTimer3;
 			packageProductDependencies = (
 				5F9229DF24980099005C91B0 /* KeychainSwift */,
-				5FE694B325649348008407AF /* Introspect */,
-				5FF237D5256497CB00AAD3D7 /* PopupView */,
+				5FAE425A2628C79600DEFB64 /* Charts */,
 			);
 			productName = Timer3;
 			productReference = 5F1A3D852472FEF8007E564D /* TogglTimer3.app */;
@@ -992,8 +1021,6 @@
 			name = TimerMac;
 			packageProductDependencies = (
 				5F33CF9025CCB9590059324C /* KeychainSwift */,
-				5F33CF9225CCB95D0059324C /* Introspect */,
-				5F33CF9425CCB9600059324C /* PopupView */,
 			);
 			productName = TimerMac;
 			productReference = 5F33CF5E25CCB94B0059324C /* TimerMac.app */;
@@ -1080,8 +1107,7 @@
 			mainGroup = 5F1A3D7C2472FEF8007E564D;
 			packageReferences = (
 				5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */,
+				5FAE42592628C79600DEFB64 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 5F1A3D862472FEF8007E564D /* Products */;
 			projectDirPath = "";
@@ -1176,16 +1202,20 @@
 				5FA71CC724732D7100BB8237 /* HomeView.swift in Sources */,
 				5FCE1D85261660C5000A0130 /* TogglResponse.swift in Sources */,
 				5FDA8E9024785A3B000A4572 /* TimeEntriesStore.swift in Sources */,
+				5FAE422A2628AECB00DEFB64 /* URLEndpoint.swift in Sources */,
 				5FAF5FC826042190002E0BA1 /* Weeks.swift in Sources */,
 				5FAAE215249B03CB006A4744 /* UIFont+preferredFont.swift in Sources */,
 				5FA71CCF24732E8600BB8237 /* TimerInspectorViewSmall.swift in Sources */,
+				5FAE42392628AF0400DEFB64 /* TogglEndpoint.swift in Sources */,
 				5F1D2F202475B2D3003B257A /* ProjectPicker.swift in Sources */,
 				5F8CD71F24F94CE700F35B56 /* TimerGroupView.swift in Sources */,
 				5FCE1D94261662B7000A0130 /* Date+string.swift in Sources */,
 				5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */,
+				5FED50612628A79D00364D1B /* ReportsEndpoint.swift in Sources */,
 				5FCE1D76261660AD000A0130 /* TogglError.swift in Sources */,
 				5FA71CC924732D7B00BB8237 /* TimerView.swift in Sources */,
 				5FCE1D6D26166090000A0130 /* HTTPMethod.swift in Sources */,
+				5FAE42832628D41800DEFB64 /* ReportsFilter.swift in Sources */,
 				5F4B377C25116975002AAF01 /* BottomBar.swift in Sources */,
 				5FAF5FB02603FEE9002E0BA1 /* View+if.swift in Sources */,
 				5FA02A8F25B4EF31003CFF1C /* ProfileRow.swift in Sources */,
@@ -1202,9 +1232,12 @@
 				5F414B88251006DB00F41D70 /* TogglTimer3App.swift in Sources */,
 				5F5832D624EF28AE002C2343 /* Array+grouping.swift in Sources */,
 				5F1A3DC42472FF64007E564D /* TogglObject.swift in Sources */,
+				5FAE42422628B26800DEFB64 /* TogglSummary.swift in Sources */,
 				5F1A558B24CDEA6000131578 /* NowPlayingView.swift in Sources */,
 				5F94AA1F25F96BFE00F76C2D /* CalFetcher.swift in Sources */,
 				5FA71CAF2473085800BB8237 /* DataWrapper.swift in Sources */,
+				5FAE427A2628D3FB00DEFB64 /* Date+iso.swift in Sources */,
+				5FAE428C2628D44900DEFB64 /* ReportsStore.swift in Sources */,
 				5F1A3DBE2472FF37007E564D /* TogglTag.swift in Sources */,
 				5FD1908B24CF1E21003F4A2A /* ActionButton.swift in Sources */,
 				5F9BA7BD24EB2C4D0015A4D5 /* ViewModelState.swift in Sources */,
@@ -1218,6 +1251,7 @@
 				5F1A91AD25C87FBC0002E131 /* ViewControllerResolver.swift in Sources */,
 				5F1D2F1E2475B005003B257A /* FormCell.swift in Sources */,
 				5FA960A124F84BBB00816DE1 /* BottomListPadding.swift in Sources */,
+				5FAE42712628CD6B00DEFB64 /* ReportsView.swift in Sources */,
 				5FE965C6255CB6E200531E0F /* String+fontlengh.swift in Sources */,
 				5F03B8E824CCDF1B0024616B /* BottomSheetView.swift in Sources */,
 				5F9BA7BB24EB04340015A4D5 /* APIClient.swift in Sources */,
@@ -1241,6 +1275,7 @@
 				5F4844D3250EE87400DBE38F /* SectionHeader.swift in Sources */,
 				5FB7538825D1ABD300DAD6BB /* CalendarEntriesView.swift in Sources */,
 				5F69550E24BA11A6003A0ACA /* DateRangePicker.swift in Sources */,
+				5FAE42512628C74100DEFB64 /* Pie.swift in Sources */,
 				5FB7539125D1AC2800DAD6BB /* CalendarEntriesViewModel.swift in Sources */,
 				5FE694A925648743008407AF /* ProjectsViewModel.swift in Sources */,
 				5F94AA3125F96D8800F76C2D /* TimeBlock.swift in Sources */,
@@ -1281,6 +1316,7 @@
 				5F33D03525CCB9EA0059324C /* AuthManager.swift in Sources */,
 				5F33D02325CCB9E20059324C /* ContentView.swift in Sources */,
 				5F33D05025CCB9F20059324C /* AppDelegate.swift in Sources */,
+				5FED50622628A79D00364D1B /* ReportsEndpoint.swift in Sources */,
 				5F33CFD725CCB9C60059324C /* SettingsView.swift in Sources */,
 				5F33CFBC25CCB9BB0059324C /* PagesBuilder.swift in Sources */,
 				5F94AA2025F96BFE00F76C2D /* CalFetcher.swift in Sources */,
@@ -1300,10 +1336,13 @@
 				5F33CFA825CCB9B00059324C /* UIConstants.swift in Sources */,
 				5F33D03725CCB9EA0059324C /* Date+starts.swift in Sources */,
 				5F33D03825CCB9EA0059324C /* TogglRequest.swift in Sources */,
+				5FAE42522628C74100DEFB64 /* Pie.swift in Sources */,
 				5F33D02425CCB9E20059324C /* SplashScreen.swift in Sources */,
 				5F33CFFF25CCB9D60059324C /* ProjectInspector.swift in Sources */,
 				5FCE1D95261662B7000A0130 /* Date+string.swift in Sources */,
+				5FAE42432628B26800DEFB64 /* TogglSummary.swift in Sources */,
 				5F33D04C25CCB9F20059324C /* TogglTimer.swift in Sources */,
+				5FAE427B2628D3FB00DEFB64 /* Date+iso.swift in Sources */,
 				5F33CFF425CCB9D10059324C /* SectionHeader.swift in Sources */,
 				5F33D04225CCB9EA0059324C /* Array+grouping.swift in Sources */,
 				5F33D03D25CCB9EA0059324C /* LoginStore.swift in Sources */,
@@ -1321,7 +1360,10 @@
 				5F33D04925CCB9F20059324C /* TogglTimerGroup.swift in Sources */,
 				5F33D03E25CCB9EA0059324C /* TimeEntriesStore.swift in Sources */,
 				5F33D05525CCB9F20059324C /* TogglProject.swift in Sources */,
+				5FAE428D2628D44900DEFB64 /* ReportsStore.swift in Sources */,
+				5FAE422B2628AECB00DEFB64 /* URLEndpoint.swift in Sources */,
 				5F33D04D25CCB9F20059324C /* TogglTimerDay.swift in Sources */,
+				5FAE423A2628AF0400DEFB64 /* TogglEndpoint.swift in Sources */,
 				5F33D00225CCB9D60059324C /* ProjectsView.swift in Sources */,
 				5F33D02C25CCB9E60059324C /* ViewModelState.swift in Sources */,
 				5F33D05425CCB9F20059324C /* TogglTimer3App.swift in Sources */,
@@ -1343,6 +1385,7 @@
 				5F33CFF825CCB9D10059324C /* TimerDetailsView.swift in Sources */,
 				5F33CFF625CCB9D10059324C /* TagsView.swift in Sources */,
 				5F33D03325CCB9EA0059324C /* TogglController.swift in Sources */,
+				5FAE42842628D41800DEFB64 /* ReportsFilter.swift in Sources */,
 				5F33D03925CCB9EA0059324C /* APIClient.swift in Sources */,
 				5F33D01C25CCB9E20059324C /* RearrangeButton.swift in Sources */,
 				5F33CFF525CCB9D10059324C /* TimeView.swift in Sources */,
@@ -1362,6 +1405,7 @@
 				5F33D03B25CCB9EA0059324C /* RecentTimersStore.swift in Sources */,
 				5F33D03F25CCB9EA0059324C /* String+Base64.swift in Sources */,
 				5F33D00E25CCB9DA0059324C /* BottomBar.swift in Sources */,
+				5FAE42722628CD6B00DEFB64 /* ReportsView.swift in Sources */,
 				5F33D01F25CCB9E20059324C /* TimerContextMenu.swift in Sources */,
 				5F33D00025CCB9D60059324C /* FormCell.swift in Sources */,
 				5F33D01825CCB9E20059324C /* DisplayError.swift in Sources */,
@@ -1904,20 +1948,12 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+		5FAE42592628C79600DEFB64 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
-			};
-		};
-		5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/PopupView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.10;
+				minimumVersion = 4.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1928,30 +1964,15 @@
 			package = 5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		5F33CF9225CCB95D0059324C /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-		5F33CF9425CCB9600059324C /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
-		};
 		5F9229DF24980099005C91B0 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F9229DE24980099005C91B0 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		5FE694B325649348008407AF /* Introspect */ = {
+		5FAE425A2628C79600DEFB64 /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE694B225649348008407AF /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-		5FF237D5256497CB00AAD3D7 /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FF237D4256497CB00AAD3D7 /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
+			package = 5FAE42592628C79600DEFB64 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = Charts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

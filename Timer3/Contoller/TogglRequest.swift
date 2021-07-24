@@ -9,52 +9,21 @@
 import Foundation
 import Combine
 
-struct TogglRequest <T: Decodable> {
-    
-    enum Endpoint {
-        case currentTimeEntry
-        case timeEntry(Int)
-        case startTimer
-        case stopRunning(Int)
-        case project(Int)
-        case user
-        case timeEntries (String, String)
-        case projects
-        case bulkTimeEntries ([Int])
-        
-        func value() -> String {
-            switch self {
-                case .currentTimeEntry:
-                    return "time_entries/current"
-                case .timeEntry(let id):
-                    return "time_entries/\(id)"
-                case .startTimer:
-                    return "time_entries/start"
-                case .stopRunning (let id):
-                    return "time_entries/\(id)/stop"
-                case .project (let id):
-                    return "projects/\(id)"
-                case .user:
-                    return "me?with_related_data=true"
-                case .timeEntries (let startDate, let endDate):
-                    return "time_entries?start_date=\(startDate)&end_date=\(endDate)"
-                case .bulkTimeEntries(let ids):
-                    let idsStrings = ids.map{ String($0) }
-                    return "time_entries/\(idsStrings.joined(separator: ","))"
-                case .projects:
-                    return "projects"
 
-            }
-        }
+struct TogglRequest <T: Decodable> {
+    enum BaseURL: String {
+        case toggl = "https://api.track.toggl.com/api/v8/"
+        case reports = "https://api.track.toggl.com/reports/api/v2/"
     }
+
     
-    var endpoint: Endpoint
+    var endpoint: URLEndpoint
     var httpMethod: HTTPMethod
     var auth: String? = AuthManager.apiKey
     var data: Data?
     var dataWrapper: DataWrapper?
-    let baseURL = "https://api.track.toggl.com/api/v8/"
-
+    var base =  BaseURL.toggl
+    
 
     var publisher: AnyPublisher<T?, TogglAPIError>? {
         guard let request = request else { return nil }
@@ -69,7 +38,7 @@ struct TogglRequest <T: Decodable> {
         guard let auth = self.auth else {
             return nil
         }
-        let url = URL(string: "\(baseURL)\(endpoint.value())")!
+        let url = URL(string: "\(base.rawValue)\(endpoint.value())")!
         let token = auth
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.value()
@@ -89,7 +58,7 @@ struct TogglRequest <T: Decodable> {
             return
         }
         
-        let url = URL(string: "\(baseURL)\(endpoint.value())")!
+        let url = URL(string: "\(base.rawValue)\(endpoint.value())")!
         let token = auth
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.value()

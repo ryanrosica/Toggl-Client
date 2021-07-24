@@ -12,16 +12,20 @@ struct TimeView: View {
     var timer: TogglTimer
     @State var duration = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var currentTime: String?
-    var color = UIConstants.Colors.secondaryFont
-
+    var color = Color.primary
     var body: some View {
-        Text("\(currentTime ?? timer.currentTime)")
-            .onReceive(duration, perform: {_ in
-                self.currentTime = self.timer.currentTime
-            })
-            .font(UIConstants.Fonts.body)
-            .foregroundColor(color)
-            .frame(width: width)
+        HStack {
+            Text("\(currentTime ?? timer.currentTime)")
+                .onReceive(duration, perform: {_ in
+                    self.currentTime = self.timer.currentTime
+                })
+                .font(.system(size: 20))
+                .foregroundColor(color)
+            Spacer()
+        }
+        .frame(width: width)
+
+
     }
     
     //MARK: Constants

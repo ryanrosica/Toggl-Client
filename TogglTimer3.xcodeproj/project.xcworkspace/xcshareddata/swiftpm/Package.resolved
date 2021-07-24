@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Charts",
+        "repositoryURL": "https://github.com/danielgindi/Charts.git",
+        "state": {
+          "branch": null,
+          "revision": "8d134a78bb2cb9e7a0f05ecbd5880bb05cd02863",
+          "version": "4.0.1"
+        }
+      },
+      {
         "package": "KeychainSwift",
         "repositoryURL": "https://github.com/evgenyneu/keychain-swift.git",
         "state": {
@@ -11,21 +20,21 @@
         }
       },
       {
-        "package": "PopupView",
-        "repositoryURL": "https://github.com/exyte/PopupView.git",
+        "package": "swift-algorithms",
+        "repositoryURL": "https://github.com/apple/swift-algorithms",
         "state": {
           "branch": null,
-          "revision": "fd37cca19583f784288dc3f1d22e9c5c69d6fd68",
-          "version": "0.0.10"
+          "revision": "04d91803a2dd58c14db9cf66c7412c6dd4a26fc8",
+          "version": "0.1.1"
         }
       },
       {
-        "package": "Introspect",
-        "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect.git",
+        "package": "swift-numerics",
+        "repositoryURL": "https://github.com/apple/swift-numerics",
         "state": {
           "branch": null,
-          "revision": "f1ec9da347a7fbe53c520d35434f6c2295650bd5",
-          "version": "0.1.1"
+          "revision": "6583ac70c326c3ee080c1d42d9ca3361dca816cd",
+          "version": "0.1.0"
         }
       }
     ]

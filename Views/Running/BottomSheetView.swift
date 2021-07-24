@@ -53,7 +53,8 @@ struct BottomSheetView<Content: View, SmallContent: View> : View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                DragHandle().padding(3)
+                DragHandle()
+                    .padding(5)
                 self.smallContent
 
                 Spacer().frame(height: 18)
@@ -62,7 +63,6 @@ struct BottomSheetView<Content: View, SmallContent: View> : View {
 
 
             }
-            .matchedGeometryEffect(id: "running", in: ani)
 
             .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
 //            .background(VisualEffectView(effect: UIBlurEffect(style: .systemMaterial)))

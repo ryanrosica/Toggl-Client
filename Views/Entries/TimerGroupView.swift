@@ -29,7 +29,7 @@ struct TimerGroupView: View {
     @ViewBuilder
     var body: some View {
         if (timerGroup.timers.count > 1) {
-            DisclosureGroup(isExpanded: $open, content: { detailViews }) {
+            DisclosureGroup(isExpanded: $open, content: { detailViews(indent: true) }) {
                 Button (action: { open.toggle() }) {
                     HStack(spacing: 8) {
                         if (true){
@@ -45,31 +45,44 @@ struct TimerGroupView: View {
                         TimeRange(timer: timerGroup.timerTemplate)
                     }
                 }
+                .frame(height: rowHeight)
+                .frame(maxWidth: .infinity)
 
             }
         }
-        else { detailViews }
+        else { detailViews() }
 
     }
     
     
-    var detailViews: some View {
+    func detailViews(indent: Bool = false) -> some View {
         ForEach(timerGroup.timers) { timer in
-            Button (action: { edit(timer)}) {
-                HStack(spacing: 8) {
-                    Rectangle()
-                        .font(.system(size: 46))
-                        .foregroundColor(timerGroup.project?.color())
-                        .frame(width: 6)
-                        .padding(2)
+            if (timer.stop != nil) {
+                HStack {
+                    if (indent) {
+                        Spacer()
+                            .frame(width: 10)
+                    }
 
-                    TimerDetailsView(timer: timer)
-                    Spacer()
-                    TimeRange(timer: timer)
+                    Button (action: { edit(timer)}) {
+                        HStack(spacing: 8) {
+                            Rectangle()
+                                .font(.system(size: 46))
+                                .foregroundColor(timerGroup.project?.color())
+                                .frame(width: 6)
+                                .padding(2)
+
+                            TimerDetailsView(timer: timer)
+                            Spacer()
+                            TimeRange(timer: timer)
+                        }
+                    }
+                    .frame(height: rowHeight)
+                    .frame(maxWidth: .infinity)
+                    .sheet(isPresented: $editing, content: { editSheet })
                 }
+
             }
-            .frame(height: rowHeight)
-            .sheet(isPresented: $editing, content: { editSheet })
 
         }
         .onDelete {
@@ -101,7 +114,7 @@ struct TimerGroupView: View {
     }
     
     
-    //MARK: Constants
+    //MARK: - Constants
     let rowHeight: CGFloat = 55
 
 }
