@@ -145,6 +145,7 @@
 		5F5832D624EF28AE002C2343 /* Array+grouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D524EF28AE002C2343 /* Array+grouping.swift */; };
 		5F5832D824EF3A4E002C2343 /* TogglTimerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D724EF3A4E002C2343 /* TogglTimerGroup.swift */; };
 		5F5832DA24EF3A64002C2343 /* TogglTimerDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5832D924EF3A64002C2343 /* TogglTimerDay.swift */; };
+		5F5C075526AC6F6F0030221F /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA02A9425B4EFBC003CFF1C /* Haptics.swift */; };
 		5F5F0ADC24F5661C00B5824F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5F0ADB24F5661C00B5824F /* SwiftUI.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5F69550E24BA11A6003A0ACA /* DateRangePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69550D24BA11A6003A0ACA /* DateRangePicker.swift */; };
 		5F8959A3248C0A0400DF5389 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8959A2248C0A0400DF5389 /* UIConstants.swift */; };
@@ -761,6 +762,25 @@
 			path = TogglIntentsUI;
 			sourceTree = "<group>";
 		};
+		5F53319E26AC6F3C00A83821 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5FDBDF33247F13BB001F9130 /* LoginView.swift */,
+				5FC003CB247F32A40040BC26 /* ContentView.swift */,
+				5FC003D1247F34FA0040BC26 /* SplashScreen.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5F5C075626AC6F800030221F /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				5FAE42702628CD6B00DEFB64 /* ReportsView.swift */,
+				5FAE42502628C74100DEFB64 /* Pie.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
 		5F8CD72024F94E6100F35B56 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -816,12 +836,11 @@
 		5FAA11B12475A8C600245894 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5FAE42702628CD6B00DEFB64 /* ReportsView.swift */,
-				5FAE42502628C74100DEFB64 /* Pie.swift */,
-				5F1A91AA25C87FBC0002E131 /* SearchBar */,
 				5F8959A2248C0A0400DF5389 /* UIConstants.swift */,
+				5F5C075626AC6F800030221F /* Reports */,
+				5F53319E26AC6F3C00A83821 /* Login */,
+				5F1A91AA25C87FBC0002E131 /* SearchBar */,
 				5F2C21CE24D9E89400DD171B /* Calendar */,
-				5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */,
 				5F8CD72224F94F4E00F35B56 /* Running */,
 				5FAAE21F249BEF2C006A4744 /* Settings */,
 				5FDA8E9124785D0A000A4572 /* Entries */,
@@ -829,10 +848,6 @@
 				5FAA11B52475A94500245894 /* Inspector */,
 				5F4B377825116929002AAF01 /* Tabs */,
 				5FAA11B32475A8F600245894 /* Shared */,
-				5FC003CB247F32A40040BC26 /* ContentView.swift */,
-				5FDBDF33247F13BB001F9130 /* LoginView.swift */,
-				5FC003D1247F34FA0040BC26 /* SplashScreen.swift */,
-				5FA02A9425B4EFBC003CFF1C /* Haptics.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -851,6 +866,7 @@
 		5FAA11B32475A8F600245894 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5FA02A9425B4EFBC003CFF1C /* Haptics.swift */,
 				5F8CD72124F94E9100F35B56 /* Labels */,
 				5F8CD72024F94E6100F35B56 /* Controls */,
 				5F414B89251009C900F41D70 /* DisplayError.swift */,
@@ -878,6 +894,7 @@
 		5FAAE21F249BEF2C006A4744 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				5F4175AA24DB54AD000CFD2E /* ManageAccountView.swift */,
 				5FAAE21C249BEF15006A4744 /* SettingsView.swift */,
 				5FA02A8E25B4EF31003CFF1C /* ProfileRow.swift */,
 			);
@@ -1394,6 +1411,7 @@
 				5F33D03C25CCB9EA0059324C /* CloudData.swift in Sources */,
 				5F33D04F25CCB9F20059324C /* TogglUser.swift in Sources */,
 				5F33CFC525CCB9BF0059324C /* ManageAccountView.swift in Sources */,
+				5F5C075526AC6F6F0030221F /* Haptics.swift in Sources */,
 				5F33D01125CCB9DA0059324C /* Tab.swift in Sources */,
 				5F33D05125CCB9F20059324C /* TogglTag.swift in Sources */,
 				5F33D00125CCB9D60059324C /* ColorPickerView.swift in Sources */,
